@@ -11,5 +11,4 @@ When indexes for an EPUB are generated, they are searched in the following order
 
 1. Title
 2. Author
-3. Text
-4. File path name
+3. eBook contents
