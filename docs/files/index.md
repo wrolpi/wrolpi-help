@@ -15,7 +15,7 @@ WROLPi can search any file in your media directory, this can only be accomplishe
 completed.
 
 > To refresh all your files, click the **Files** link in the top navigation bar, then click **Refresh All** found at the
-> bottom of the files page.
+> bottom of the files table.
 
 ## Files Tools
 
@@ -40,7 +40,6 @@ The tool buttons are as displayed:
       selected.)
 
 ## File Preview
-<details>hello</details>
 
 When clicking on any file, WROLPi will attempt to provide you with a preview of the file. If no previewer has been
 created for the particular file type has been created, then the generic file preview will be used.

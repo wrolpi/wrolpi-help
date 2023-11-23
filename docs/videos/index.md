@@ -60,3 +60,11 @@ change the channel's directory.
 
 At the bottom of this page you will see the statistics of the channel's video files. This is useful if you want to be
 sure that all videos were found during a refresh.
+
+## Searching
+
+When the indexes for a Video are generated for searching, they are searched in the following order of precedence:
+
+1. Title
+2. Description
+3. Subtitles
