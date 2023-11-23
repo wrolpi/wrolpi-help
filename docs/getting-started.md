@@ -1,7 +1,5 @@
 # Getting Started
 
-For hardware recommendations, see [Recommended Hardware](system/recommended-hardware.md).
-
 ## Finish WROLPi Installation
 
 To finish your WROLPi installation follow these steps:
