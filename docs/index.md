@@ -20,3 +20,4 @@ This is the WROLPi help documentation.
 1. Storage is cheaper than power.
 2. Two is one, one is none.
 3. Run silently.
+4. [Primary, secondary, tertiary.](system/primary-secondary-tertiary.md)

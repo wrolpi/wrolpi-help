@@ -1,13 +1,20 @@
 # Overview of WROLPi Systems
 
 * WROLPi is based off [Debian OS](https://debian.org) and [Raspberry Pi OS](https://www.raspberrypi.com/software/)
-* WROLPi has 4 user-facing services:
-    * [API](#api)
-    * [App](#app)
-    * [Map](#map)
-    * [Zim](#zim)
+* WROLPi has several user-facing services:
+    * [Web](#web) (`:80`)
+    * [API](#api) (`:8081`)
+    * [App](#app) (`:8082`)
+    * [Map](#map) (`:8084`)
+    * [Zim](#zim) (`:8085`)
+    * [Help](#help) (`:8086`)
 
 ## Services
+
+### Web
+
+The nginx service which facilitates communication between the other services (especially in the docker containers in
+the development environment.)
 
 ### API
 
@@ -39,15 +46,46 @@
 
 ### Map
 
-| Software Project                                | Purpose                                  |
-|-------------------------------------------------|------------------------------------------|
-| [OpenStreetMap](https://www.openstreetmap.org/) | Provides the Map data                    |
-| [osmium](https://osmcode.org/osmium-tool/)      | Used to merge map PBF files.             |
-| [osm2pgsql](https://osm2pgsql.org/)             | Used to import PBF files into Postgresql |
+| Software Project                                | Purpose                                   |
+|-------------------------------------------------|-------------------------------------------|
+| [OpenStreetMap](https://www.openstreetmap.org/) | Provides the Map data.                    |
+| [osmium](https://osmcode.org/osmium-tool/)      | Used to merge map PBF files.              |
+| [osm2pgsql](https://osm2pgsql.org/)             | Used to import PBF files into Postgresql. |
 
 ### Zim
 
-| Software Project                                      | Purpose                       |
-|-------------------------------------------------------|-------------------------------|
-| [Kiwix](https://kiwix.org)                            | Provides the ZIM files        |
-| [Kiwix Server](https://github.com/kiwix/kiwix-tools/) | Hosts the ZIM files interface |
+| Software Project                                      | Purpose                        |
+|-------------------------------------------------------|--------------------------------|
+| [Kiwix](https://kiwix.org)                            | Provides the ZIM files.        |
+| [Kiwix Server](https://github.com/kiwix/kiwix-tools/) | Hosts the ZIM files interface. |
+
+### Help
+
+| Software Project                  | Purpose                                    |
+|-----------------------------------|--------------------------------------------|
+| [Mkdocs](https://www.mkdocs.org/) | Serves these Markdown documentation files. |
+
+## Development Only Services
+
+If using the Docker containers (the development environment), you may have additional services:
+
+* [Web](#development-web) (`:8080`)
+* [Archive](#archive) (`:8083`)
+
+### Development Web
+
+| Software Project            | Purpose                                                       |
+|-----------------------------|---------------------------------------------------------------|
+| [nginx](https://nginx.org/) | Facilitates integration between development docker containers |
+
+### Archive
+
+Separation of the API and the Archive service is necessary to prevent an overly complex API docker container.
+
+| Software Project                                           | Purpose                                                                                             |
+|------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| [Python](https://python.org)                               | The language of the Archive service.                                                                |
+| [Sanic](https://sanic.dev)                                 | An async web app framework, used to facilitate archiving of webpage in the development environment. |
+| [SingleFile](https://github.com/gildas-lormeau/SingleFile) | Used to create Archives.                                                                            |
+| [Readability](https://github.com/mozilla/readability)      | Used to extract the article from an Archive.                                                        |
+| [Chromium](https://chromium.org)                           | Used to create Archives.                                                                            |
