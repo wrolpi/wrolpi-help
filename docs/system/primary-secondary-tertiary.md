@@ -5,7 +5,7 @@ and tertiary options to use your WROLPi may be available.
 
 | Module   | Primary   | Secondary                                               | Tertiary                                            |
 |----------|-----------|---------------------------------------------------------|-----------------------------------------------------|
-| Videos   | React App | VLC application                                         | Subtitle files can be opened with a text editor.    |
+| Videos   | React App | Open video files with VLC.                              | Open subtitle files with a text editor.             |
 | Archives | React App | Open Archive files directly with Chromium               | Readability files can be opened with a text editor. |
 | Map      | React App | Map is directly accessible on port `:8084`              | None                                                |
 | Zim      | React App | Kiwix server is directly accessible on port `:8085`     | Kiwix application                                   |
