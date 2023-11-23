@@ -4,14 +4,15 @@ This is the WROLPi help documentation.
 
 ## Modules
 
-* [Files](files/index.md)
-* [Videos](videos/index.md)
-* [Archives](archives/index.md)
-* [Map](map/index.md)
-* [Zim](zim/index.md)
+* [Files](modules/files/index.md)
+* [Videos](modules/videos/index.md)
+* [Archives](modules/archives/index.md)
+* [Map](modules/map/index.md)
+* [Zim](modules/zim/index.md)
 
 ## WROLPi
 
+* [Getting Started](getting-started.md)
 * [Systems](system/index.md)
 * [Recommended Hardware](system/recommended-hardware.md)
 
