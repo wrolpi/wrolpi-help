@@ -16,8 +16,8 @@ Information about the parts of the WROLPi interface.
 
 Information about a WROLPi system.
 
-* [Getting Started](getting-started.md)
-* [Getting Help](getting-help.md)
+* [Getting Started](system/getting-started.md)
+* [Getting Help](system/getting-help.md)
 * [Systems](system/index.md)
 * [Recommended Hardware](system/recommended-hardware.md)
 

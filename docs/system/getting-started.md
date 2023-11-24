@@ -9,7 +9,7 @@ To finish your WROLPi installation follow these steps:
 2. Finish the installation with the repair script: `sudo bash /opt/wrolpi/repair.sh`
 3. Reboot: `sudo reboot`
 4. After reboot, browse to `http://wrolpi.local` or `http://127.0.0.1` on the WROLPi itself.
-5. [Refresh your files](modules/files/index.md#refreshing)
+5. [Refresh your files](../modules/files/index.md#refreshing)
 
 # Creating a new WROLPi
 
@@ -57,4 +57,4 @@ on a new Debian computer.
 6. Finish the installation with the repair script: `sudo bash /opt/wrolpi/repair.sh`
 7. Reboot: `sudo reboot`
 8. Join the Hotspot or browse to `http://wrolpi.local` or the IP address of your WROLPi!
-9. [Refresh your files](modules/files/index.md#refreshing)
+9. [Refresh your files](../modules/files/index.md#refreshing)
