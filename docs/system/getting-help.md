@@ -1,4 +1,5 @@
-# Getting Help Online
+# Getting Help
+## Online
 
 Help can be found online at these places:
 
@@ -6,22 +7,22 @@ Help can be found online at these places:
 * WROLPi Github: [https://github.com/lrnselfreliance/wrolpi](https://github.com/lrnselfreliance/wrolpi)
 * WROLPi Youtube Channel: [https://www.youtube.com/@wrolpi](https://www.youtube.com/@wrolpi)
 
-## `install.sh`
+### `install.sh`
 
 WROLPi may be repaired using the installation script which requires internet, run it like so:
 
 `/opt/wrolpi/install.sh`
 
-# Getting Help Offline
+## Offline
 
-## `repair.sh`
+### `repair.sh`
 
 WROLPi has a repair script which will attempt to repair the WROLPi while offline. It copies configs, restarts services,
 etc. Run the repair script like so:
 
 `/opt/wrolpi/repair.sh`
 
-## `help.sh`
+### `help.sh`
 
 WROLPi has a help script which checks common failure points on a WROLPi system, run it like so:
 
@@ -86,9 +87,9 @@ OK: Help service is running
 
 The output above will help an experienced developer narrow down the cause of an issue.
 
-# Reset
+## Reset
 
-## Reset API Database
+### Reset API Database
 
 The `wrolpi` database contains the tables and indexes which allow you to search or even browse your WROLPi. A script is
 provided which will delete and re-create this database.  **Warning you will need to refresh your files!**  Run it if the
