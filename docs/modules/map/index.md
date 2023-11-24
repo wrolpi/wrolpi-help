@@ -23,6 +23,30 @@ time will be.
 ### Downloading Map Files
 
 Map files are available for download from the Geofabrick company. You can download them using the **Files Downloader**,
-save them to the `map` directory.  After they have been downloaded, you will need to import them.
+save them to the `map` directory. After they have been downloaded, you will need to import them.
 
 ![Downloading of a custom OSM PBF file.](pbf-file-downloader.png)
+
+## Manually Importing
+
+You can manually import a PBF file using the **import_map.sh** script:
+
+`/opt/wrolpi/scripts/import_map.sh /media/wrolpi/map/austria-231121.osm.pbf`
+
+Multiple maps can be imported like so:
+
+`/opt/wrolpi/scripts/import_map.sh /media/wrolpi/map/one.osm.pbf /media/wrolpi/map/two.osm.pbf /media/wrolpi/map/three.osm.pbf`
+
+## Reset Map
+
+If your map is not working, maps cannot be imported, or some other reason, you can reset the map database using the
+reset script:
+
+`/opt/wrolpi/scripts/reset_map.sh`
+
+Next, run the repair script:
+
+`/opt/wrolpi/repair.sh`
+
+Browse to your map, you should see the default map. If you do not, you may need to clear your browse's cache. Next,
+import your desired maps.
