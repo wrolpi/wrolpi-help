@@ -18,6 +18,7 @@ Information about a WROLPi system.
 
 * [Getting Started](system/getting-started.md)
 * [Getting Help](system/getting-help.md)
+* [Logs](system/logs.md)
 * [Systems](system/index.md)
 * [Recommended Hardware](system/recommended-hardware.md)
 

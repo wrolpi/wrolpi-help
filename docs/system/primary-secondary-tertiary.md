@@ -1,6 +1,6 @@
 # Primary, Secondary, Tertiary.
 
-WROLPI attempts to integrate all services in an easy to learn interface. But, if the React app is unavailable, secondary
+WROLPi attempts to integrate all services in an easy to learn interface. But, if the React app is unavailable, secondary
 and tertiary options to use your WROLPi may be available.
 
 | Module   | Primary   | Secondary                                               | Tertiary                                            |

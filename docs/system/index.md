@@ -8,6 +8,7 @@
     * [Map](#map) (`:8084`)
     * [Zim](#zim) (`:8085`)
     * [Help](#help) (`:8086`)
+* WROLPi services are started and maintained by `systemd`.  [Logs](logs.md) are gathered by `systemd`.
 
 ## Services
 
@@ -36,7 +37,7 @@ the development environment.)
 |-------------------------------------------|----------------------------------------------------------------------|
 | [Postgresql](https://www.postgresql.org/) | Facilitates searching of files, scheduling downloads, and much more. |
 
-### App
+### React App
 
 | Software Project                             | Purpose                                                            |
 |----------------------------------------------|--------------------------------------------------------------------|
