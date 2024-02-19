@@ -1,0 +1,45 @@
+# Logs
+
+The following is a simple overview to view the logs of the [WROLPi Services](index.md#services). WROLPi logs are
+gathered by `systemd`.  Logs are viewed using `journalctl`.
+
+You can watch all the logs on your WROLPi:
+
+`journalctl -f`
+
+More detailed logs can be viewed:
+
+`journalctl -f -p debug`
+
+To view logs only from the most recent boot:
+
+`journalctl -f -b`
+
+The above commands use `-f` (follow) which will display logs as soon as they are created.  You can view older logs by
+removing `-f` from the command, but you will need to use your keyboard to navigate the logs.  Use `up`, `down`,
+`page-up` and `page-down` keys.  You can also use `g` to navigate to the top of the log, and `shift-g` to navigate to
+the bottom of the logs.
+
+## API
+
+To watch the API logs:
+
+`journalctl -f -u wrolpi-api`
+
+## React App
+
+To watch the React App logs:
+
+`journalctl -f -u wrolpi-app`
+
+## Map
+
+To watch the Map logs:
+
+`journalctl -f -u renderd`
+
+## Zim
+
+To watch the React App logs:
+
+`journalctl -f -u wrolpi-kiwix`
