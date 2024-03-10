@@ -31,22 +31,30 @@ save them to the `map` directory. After they have been downloaded, you will need
 
 You can manually import a PBF file using the **import_map.sh** script:
 
-`/opt/wrolpi/scripts/import_map.sh /media/wrolpi/map/austria-231121.osm.pbf`
+```shell
+/opt/wrolpi/scripts/import_map.sh /media/wrolpi/map/austria-231121.osm.pbf
+```
 
 Multiple maps can be imported like so:
 
-`/opt/wrolpi/scripts/import_map.sh /media/wrolpi/map/one.osm.pbf /media/wrolpi/map/two.osm.pbf /media/wrolpi/map/three.osm.pbf`
+```shell
+/opt/wrolpi/scripts/import_map.sh /media/wrolpi/map/one.osm.pbf /media/wrolpi/map/two.osm.pbf /media/wrolpi/map/three.osm.pbf
+```
 
 ## Reset Map
 
 If your map is not working, maps cannot be imported, or some other reason, you can reset the map database using the
 reset script:
 
-`/opt/wrolpi/scripts/reset_map.sh`
+```shell
+/opt/wrolpi/scripts/reset_map.sh
+```
 
 Next, run the repair script:
 
-`/opt/wrolpi/repair.sh`
+```shell
+/opt/wrolpi/repair.sh
+```
 
-Browse to your map, you should see the default map. If you do not, you may need to clear your browse's cache. Next,
+Browse to your map, you should see the default map. If you do not, you may need to clear your browse's cache. Finally,
 import your desired maps.

@@ -27,11 +27,11 @@ Archive files are named using three parts:
 If archiving `https://wrolpi.org/getting-started`, the resulting files might be named as follows:
 
 ```
-wrolpi.org/2023-01-01-12-00-00_Getting Started.html
-wrolpi.org/2023-01-01-12-00-00_Getting Started.readability.html
-wrolpi.org/2023-01-01-12-00-00_Getting Started.readability.txt
-wrolpi.org/2023-01-01-12-00-00_Getting Started.readability.json
-wrolpi.org/2023-01-01-12-00-00_Getting Started.png
+/media/wrolpi/archive/wrolpi.org/2023-01-01-12-00-00_Getting Started.html
+/media/wrolpi/archive/wrolpi.org/2023-01-01-12-00-00_Getting Started.readability.html
+/media/wrolpi/archive/wrolpi.org/2023-01-01-12-00-00_Getting Started.readability.txt
+/media/wrolpi/archive/wrolpi.org/2023-01-01-12-00-00_Getting Started.readability.json
+/media/wrolpi/archive/wrolpi.org/2023-01-01-12-00-00_Getting Started.png
 ```
 
 WROLPi will attempt to extract the Readability and create a screenshot from the Singlefile. If this is not possible,
