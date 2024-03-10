@@ -29,3 +29,17 @@ subscription list. If you would like to download a specific Zim file, use the **
 the `zims` directory.  (You may need to restart your WROLPi for the new Zim file to be found.)
 
 ![Downloading a Zim file using the Files Downloader](zim-file-downloader.png)
+
+## Kiwix without WROLPi
+
+WROLPi comes with Kiwix pre-installed, this application allows you to use your zim files even if the React App is not
+working.
+
+### Raspberry Pi
+
+Kiwix can be started by navigating: `Applications Menu > Education > Kiwix`
+
+![kiwix-rpi-application-start.png](kiwix-rpi-application-start.png)
+
+Any zim file can be opened using the "Open" button on the top right of the Kiwix application. Zim files are usually
+stored in `/media/wrolpi/zims`.

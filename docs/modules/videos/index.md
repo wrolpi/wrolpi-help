@@ -8,6 +8,8 @@ Videos Module (`/videos`) allows browsing all video files.
 In the context of WROLPi, a Video refers to a set of [similarly named files](files.md) created during
 download. A single video file is also supported.
 
+![video-page.png](video-page.png)
+
 ## Video Format
 
 As of the writing of this article, WROLPi favors MP4 files due to their small size and universal support.
@@ -68,3 +70,18 @@ When the indexes for a Video are generated for searching, they are searched in t
 1. Title
 2. Description
 3. Subtitles
+
+## Videos without WROLPi
+
+WROLPi comes with VLC pre-installed, this application allows you to watch video files, even if the React App is not
+working. VLC also displays captions when the caption file is named like the video file (see
+[Video Files](../videos/files.md)).
+
+### Raspberry Pi
+
+VLC can be launched by navigating: `Applicaions Menu > Sound & Video > VLC Media Player`
+
+![wrolpi-launch-vlc.png](wrolpi-launch-vlc.png)
+
+Any video file can be opened by navigating `Media > Open File`. VLC will automatically display captions files that
+WROLPi has downloaded.
