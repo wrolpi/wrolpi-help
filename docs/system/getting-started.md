@@ -4,14 +4,13 @@
 
 To finish your WROLPi installation follow these steps:
 
-1. Modify fstab to mount your external drive(s). In the example below, `/dev/sda1` will be mounted to `/media/wrolpi`
+1. Modify fstab to [mount your external drive(s)](external-drives.md). In the example below, `/dev/sda1` will be mounted
+   to `/media/wrolpi`
     1. `echo '/dev/sda1 /media/wrolpi auto defaults,nofail 0 0' | sudo tee -a /etc/fstab`
 2. Finish the installation with the repair script: `sudo bash /opt/wrolpi/repair.sh`
 3. Reboot: `sudo reboot`
 4. After reboot, browse to `http://wrolpi.local` or `http://127.0.0.1` on the WROLPi itself.
 5. [Refresh your files](../modules/files/index.md#refreshing)
-
-[Support for multiple drives](external-drives.md)
 
 # Creating a new WROLPi
 
