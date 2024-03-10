@@ -43,3 +43,16 @@ steps.
 4. Verify that the mounts are correct by rebooting.
     - `sudo reboot`
 5. [Refresh your files](../modules/files/index.md#refreshing)
+
+# Default fstab
+
+This is an example default fstab on a Raspberry Pi:
+
+```
+proc            /proc           proc    defaults          0       0
+PARTUUID=4f724c6e-01  /boot/firmware  vfat    defaults          0       2
+PARTUUID=4f724c6e-02  /               ext4    defaults,noatime  0       1
+/dev/sda1 /media/wrolpi auto defaults,nofail 0 0
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+```
