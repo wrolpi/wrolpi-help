@@ -1,11 +1,11 @@
-# Special Directories
+# Special System Directories
 
 | Path                    | Purpose                                                  |
 |-------------------------|----------------------------------------------------------|
 | `/media/wrolpi/`        | The [Media Directory](#media-directory).                 |
 | `/opt/wrolpi/`          | The [source code](#wrolpi-source-directory) of WROLPi.   |
 | `/media/wrolpi/config/` | The [configuration files](#wrolpi-config) of the WROLPi. |
-| `/opt/wrolpi-blobs/`    | Contains files necessary to the repair of a WROLPi.      |
+| `/opt/wrolpi-blobs/`    | Contains files necessary to repair a WROLPi.             |
 | `/opt/wrolpi-help/`     | These help files.                                        |
 
 ## Media Directory
