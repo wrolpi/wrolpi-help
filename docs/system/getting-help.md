@@ -71,6 +71,7 @@ OK: Kiwix app responded
 
 OK: The media directory exists
 OK: Can modify media directory
+OK: Media directory is a mounted drive
 OK: Media directory files are served by nginx
 OK: Config can be fetched from nginx
 OK: Media directory is owned by wrolpi user

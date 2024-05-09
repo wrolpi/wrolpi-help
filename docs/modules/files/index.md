@@ -14,7 +14,7 @@ that have recently been created, and are not yet in the database.
 WROLPi can search any file in your media directory, this can only be accomplished after a full files refresh has been
 completed.
 
-> To refresh all your files, click the **Files** link in the top navigation bar, then click **Refresh All** found at the
+> To refresh all your files, click the **Files** link in the top navigation bar, then click **Refresh** found at the
 > bottom of the files table.
 
 ## Files Tools
