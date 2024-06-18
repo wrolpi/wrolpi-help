@@ -9,5 +9,4 @@ and tertiary options to use your WROLPi may be available.
 | Archives | [React App](../modules/archives/index.md) | Open Archive files directly with Chromium                                      | Readability files can be opened with a text editor.               |
 | Map      | [React App](../modules/map/index.md)      | Map is directly accessible on port `:8084`                                     | None                                                              |
 | Zim      | [React App](../modules/zim/index.md)      | Kiwix server is directly accessible on port `:8085`                            | [Kiwix application](../modules/zim/index.md#kiwix-without-wrolpi) |
-| Help     | [React App](../..)                        | Markdown files are available in `/opt/wrolpi-help/docs`                        | None                                                              |
-
+| Help     | React App                                 | Help server is directly accessible on port `:8086`                             | Markdown files are available in `/opt/wrolpi-help/docs`           |
