@@ -27,7 +27,7 @@ them outside of these tools.**
 
 The tool buttons are as displayed:
 
-1. **Refresh All** or **Refresh** button
+1. **Refresh** button
     * This button will refresh all files in your media directory, or any files/directories you have selected.
 2. **Delete** button
     * This button will delete any files or directories selected.

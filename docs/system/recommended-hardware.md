@@ -1,6 +1,6 @@
 ## Recommended Hardware
 
-WROLPis is expected to run in one of two systems, on a Raspberry Pi, or on a computer running Debian OS.
+WROLPi is expected to run in one of two systems, on a Raspberry Pi, or on a computer running Debian OS.
 
 ### Recommended Raspberry Pi Hardware
 
