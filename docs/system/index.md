@@ -4,7 +4,7 @@
 * WROLPi has several user-facing services:
     * [Web](#web) (`:80`)
     * [API](#api) (`:8081`)
-    * [App](#app) (`:8082`)
+    * [App](#react-app) (`:8082`)
     * [Map](#map) (`:8084`)
     * [Zim](#zim) (`:8085`)
     * [Help](#help) (`:8086`)
