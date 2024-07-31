@@ -10,3 +10,4 @@ and tertiary options to use your WROLPi may be available.
 | Map      | [React App](../modules/map/index.md)      | Map is directly accessible on port `:8084`                                     | None                                                              |
 | Zim      | [React App](../modules/zim/index.md)      | Kiwix server is directly accessible on port `:8085`                            | [Kiwix application](../modules/zim/index.md#kiwix-without-wrolpi) |
 | Help     | React App                                 | Help server is directly accessible on port `:8086`                             | Markdown files are available in `/opt/wrolpi-help/docs`           |
+| Tags     | React App                                 | Browse the Tags Directory: `/media/wrolpi/tags`                                | Read the config: `/media/wrolpi/config/tags.yaml`                 |
