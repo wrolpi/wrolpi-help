@@ -1,12 +1,13 @@
 # Special System Directories
 
-| Path                    | Purpose                                                  |
-|-------------------------|----------------------------------------------------------|
-| `/media/wrolpi/`        | The [Media Directory](#media-directory).                 |
-| `/opt/wrolpi/`          | The [source code](#wrolpi-source-directory) of WROLPi.   |
-| `/media/wrolpi/config/` | The [configuration files](#wrolpi-config) of the WROLPi. |
-| `/opt/wrolpi-blobs/`    | Contains files necessary to repair a WROLPi.             |
-| `/opt/wrolpi-help/`     | These help files.                                        |
+| Path                    | Purpose                                                                              |
+|-------------------------|--------------------------------------------------------------------------------------|
+| `/media/wrolpi/`        | The [Media Directory](#media-directory).                                             |
+| `/media/wrolpi/config/` | The [configuration files](#wrolpi-config) of the WROLPi.                             |
+| `/media/wrolpi/tags/`   | The [Tags Directory](#tags-directory) contains links to files that have been tagged. |
+| `/opt/wrolpi-blobs/`    | Contains files necessary to repair a WROLPi.                                         |
+| `/opt/wrolpi-help/`     | These help files.                                                                    |
+| `/opt/wrolpi/`          | The [source code](#wrolpi-source-directory) of WROLPi.                               |
 
 ## Media Directory
 
@@ -17,18 +18,21 @@ files that are downloaded by WROLPi will be saved within this directory.
 
 The normal media directory is `/media/wrolpi`
 
-## WROLPi Source Directory
-
-`/opt/wrolpi/`
-
-This directory contains the source code of the WROLPi API, app, etc.
-
 ## WROLPi Config
 
 `/media/wrolpi/config/`
 
 This directory contains the configuration files of the WROLPi. These files are considered the "source of truth" and
 their contents will alter the behavior of the WROLPi.
+
+## Tags Directory
+
+`/media/wrolpi/tags`
+
+This directory contains links to tagged files. It is automatically managed by WROLPi as you add or remove tags from
+files.
+
+**Warning!**  Do not store files in this directory, they will be automatically deleted.
 
 ## WROLPi Blobs
 
@@ -42,3 +46,9 @@ Postgresql dump of the map database.  **It is best to leave this directory as-is
 `/opt/wrolpi-help/`
 
 This help file you are reading is contained in this directory.
+
+## WROLPi Source Directory
+
+`/opt/wrolpi/`
+
+This directory contains the source code of the WROLPi API, app, etc.
