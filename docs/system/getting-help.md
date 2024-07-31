@@ -31,6 +31,8 @@ WROLPi has a help script which checks common failure points on a WROLPi system, 
 Example output:
 
 ```text
+WROLPi version: 0.13.1-beta
+
 OK: Running on Raspberry Pi
 OK: Found wrolpi user
 OK: The WROLPi directory exists
@@ -47,6 +49,7 @@ OK: WROLPi database has files
 
 OK: WROLPi Python virtual environment exists
 OK: WROLPi main can be run
+OK: Sanic can be run
 OK: WROLPi API systemd exists
 OK: WROLPi API service is up
 OK: WROLPi API echoed correctly
@@ -83,7 +86,11 @@ OK: yt-dlp can be run
 OK: Chromium can be run
 OK: ffmpeg can be run
 
+OK: Help mkdocs can be run
 OK: Help service is running
+
+OK: Can ping 1.1.1.1
+OK: Can ping wrolpi.org
 ```
 
 The output above will help an experienced developer narrow down the cause of an issue.
