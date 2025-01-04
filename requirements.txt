@@ -1,2 +1,1 @@
-# Install newer version of mkdocs to avoid navbar bug.
-git+https://github.com/mkdocs/mkdocs.git@12d4345a419e06a7edeb2effec7c98c36c907029#egg=mkdocs
+mkdocs==1.6.1

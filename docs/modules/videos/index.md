@@ -13,18 +13,45 @@ download. A single video file is also supported.
 ## Video Format
 
 As of the writing of this article, WROLPi favors MP4 files due to their small size and universal support.
-WROLPi will index many other video formats, but it will always download an MP4 (this may be changed in the
-future).
+WROLPi will index many other video formats.
 
-## Downloading
+## Downloading Videos
 
-WROLPi will download a video (and related files) to that video's channel's directory. If you downloaded a
+WROLPi will download a video (and related files) to that video's channel's directory. For example, if you downloaded a
 video from the WROLPi channel, then your video will be stored in `videos/WROLPi` by default.
 
-It is possible to override the default download directory by opening the Advanced accordion on the Videos
-download modal:
-
 ![Videos Download Modal](video-download-modal.png)
+
+### Download Options
+
+* **Videos Tags**
+    * All selected Tags will be applied to every video downloaded.
+* **Destination**
+    * Override the default download directory by choosing a directory using the **Destination** input.
+* **Video Resolutions**
+    * Download each video in the first resolution matched. If you select "1080p, 720p" and a video has both resolutions
+      available, it will use
+      1080p, if no 1080p is available, then 720p will be downloaded, if neither resolutions is available an error will
+      be reported.
+* **Video Format**
+    * The file format the video will be encapsulated in.
+        * `mp4` is the most universally compatible (but proprietary).
+        * `mkv` is an open-standard media format.
+* **Channel Tag**
+    * The selected Tag will be applied to any new Channel created in the process of downloading these videos. The
+      Channel will be placed in the respective tag directory in the `videos` directory.
+
+## Download Channels/Playlists
+
+WROLPi can download all videos from a channel, or playlist. This is done using the `Download > Channel/Playlist`
+download button.
+
+![img.png](channel-download-modal.png)
+
+### Download Options
+
+* **Videos Tags**
+    * All selected Tags will be applied to every video downloaded.
 
 ## Channel
 
@@ -38,27 +65,64 @@ that you have not downloaded.
 ### Creating a Channel
 
 There are two methods to create a channel: the simplest is by downloading a video, which will automatically create the
-channel for you. Alternatively, you can manually create a channel by navigating to the New Channel Page
+channel for you.
+
+Alternatively, you can manually create a channel by navigating to the New Channel Page
 (`/videos/channel/new`). Access this page by clicking **Videos**, selecting the **Channels** tab, and then clicking
 **New Channel**.
 
 ![New Channel page](channel-new-page.png)
 
-Enter the new channel's name and its directory. All other fields are optional  (be sure to enable
-`Create this directory, if it doesn't exist` if necessary).
-
-* Note: When entering a Channel's URL, you may need to append `/videos` to ensure the videos are downloaded to the
-  correct location.
+Enter the new channel's name and its directory.
 
 ### Editing a Channel
 
 To edit a Channel, navigate to the Channels (`/videos/channels`) page and click the 'Edit' button on the right. You will
 be directed to the following page:
 
-![Channel Edit Page](channel-edit-page.png)
+![img.png](channel-edit-page.png)
 
-On this page, you can modify the download frequency, the channel name, or the URL. Currently, it is not possible to
-change the channel's directory.
+On this page, you can modify the channel name, or the directory.
+
+**Warning:** If you change the Channel's directory, all files in the directory (video or not) will be moved to the new
+directory you specified. If the automatic move fails somehow, you will need to manually move the files to the correct
+directory, then refresh your files. You will probably need to manually re-apply any tags to your videos again. If you
+are unsure what your previous tags were, open the `tags.yaml` config of the previous day (`/media/wrolpi/tags/backup`)
+to see what tags you had applied.
+
+#### Details
+
+Under the **Details** dropdown, you will see the Channel's URL and RSS URL (if available).
+
+**Tip:** You can use the RSS URL to download new videos from a Channel quickly after they are released.
+
+#### Channel Tag
+
+You can also tag a Channel here. Only one Tag can be applied to a Channel. After clicking the **Tag** button, the
+following modal will suggest moving your Channel (and it's files) under the respective tag directory in the `videos`
+directory. You can uncheck "Move to directory" if you do not want to use the suggested directory.
+
+![img.png](channel-tag-modal.png)
+
+#### Buttons
+
+**Delete**
+
+* Used to delete the Channel. The files in the Channel's directory will not be deleted.
+
+**Refresh**
+
+* Refresh the files in the Channel's directory. Useful if you manually alter files in the directory.
+
+**Tag**
+
+* Add or replace the Tag of the Channel.
+
+#### Downloads
+
+You can add or update Downloads for this Channel.
+
+#### Statistics
 
 At the bottom of this page you will see the statistics of the channel's video files. This is useful if you want to be
 sure that all videos were found during a refresh.
@@ -79,7 +143,7 @@ working. VLC also displays captions when the caption file is named like the vide
 
 ### Raspberry Pi
 
-VLC can be launched by navigating: `Applicaions Menu > Sound & Video > VLC Media Player`
+VLC can be launched by navigating: `Applications Menu > Sound & Video > VLC Media Player`
 
 ![wrolpi-launch-vlc.png](wrolpi-launch-vlc.png)
 

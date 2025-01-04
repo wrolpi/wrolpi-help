@@ -33,15 +33,23 @@ on a new Raspberry Pi.
 
 1. Unplug your Raspberry Pi
 2. Insert the micro SD card from step 2 into your Raspberry Pi
-3. Connect any peripherals to your Raspberry Pi, then turn it on.
-4. Login as the **pi** user with the password **wrolpi**
-5. Launch the Terminal application
-    1. Change your password with: `passwd`
-    2. Modify fstab to mount your external drive to **/media/wrolpi**
+3. Connect any peripherals to your Raspberry Pi.
+4. Boot your Raspberry Pi.
+5. Choose your Country/Language/Timezone.
+6. Choose your own username and password (do not use the wrolpi user).
+7. Skip "Wi-Fi Selection", it is not required.
+8. Choose your favorite browser.
+9. Skip "Raspberry Pi Connect".
+10. Skip "Update Software".
+11. Restart.
+12. Login using the user you created above.
+13. Launch the Terminal application
+    1. Modify fstab to mount your external drive to **/media/wrolpi**
         * `echo '/dev/sda1 /media/wrolpi auto defaults,nofail 0 0' | sudo tee -a /etc/fstab`
-    3. Finish the installation with the repair script:
-        * `sudo bash /opt/wrolpi/repair.sh`
-    4. Reboot: `sudo reboot`
+    2. Finish the installation with the repair script:
+        * `/opt/wrolpi/repair.sh`
+    3. Reboot: `sudo reboot`
+14. Join the Hotspot, browse to https://wrolpi.local or, the IP address of your WROLPi!
 
 ## Debian
 

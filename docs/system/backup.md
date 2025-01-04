@@ -33,6 +33,7 @@ echo >> ${logfile}
 echo start $(date +"%Y-%m-%d %H:%M:%S") >> ${logfile}
 /usr/bin/rsync \
     --exclude="lost+found" \
+    --exclude="tags" \
     -avue ssh \
     wrolpi@PRIMARY_IP_ADDRESS:/media/wrolpi/* \
     /media/wrolpi/ \
