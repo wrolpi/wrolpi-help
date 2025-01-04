@@ -38,7 +38,7 @@ files.
 
 `/opt/wrolpi-blobs/`
 
-This directory contains the files necessary to repair a WROLPi. For example, the `gis-map.dump.gz` file contains a
+This directory contains the files necessary to repair a WROLPi. For example, the `map-db-gis.dump` file contains a
 Postgresql dump of the map database.  **It is best to leave this directory as-is.**
 
 ## WROLPi Help
