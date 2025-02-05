@@ -42,3 +42,8 @@ When the indexes for an Archive are generated for searching, they are searched i
 1. Title
 2. HTML Metadata Description
 3. Readability Text
+
+## My Archive Download Fails
+
+If your Archive download repeatedly fails, you can manually archive a webpage using the SingleFile browser extension.
+See this detailed page: [SingleFile Browser Extension](singlefile-extension.md)
