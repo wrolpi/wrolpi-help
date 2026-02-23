@@ -5,7 +5,7 @@ may not yet be available.
 
 Epub files are desired as ebooks, though some support for Mobi files is provided. Reasons why WROLPi supports Epub:
 
-* Epub files are simple.  An Epub file is a zip file containing HTML files.
+* Epub files are simple. An Epub file is a zip file containing HTML files.
 * Third-party support for reading Epubs is much more feature-rich.
 * Images are files in the Epub zip.
 * Device supports for Epubs is nearly ubiquitous.

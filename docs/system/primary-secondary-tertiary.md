@@ -5,6 +5,7 @@ and tertiary options to use your WROLPi may be available.
 
 | Module   | Primary                                   | Secondary                                                                      | Tertiary                                                          |
 |----------|-------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| System   | [React App](../controller/index.md)       | [Controller](../controller/index.md) on port `:8087`                           | CLI tools (systemctl, mount, etc.)                                |
 | Videos   | [React App](../modules/videos/index.md)   | [Open video files with VLC.](../modules/videos/index.md#videos-without-wrolpi) | Open subtitle files with a text editor.                           |
 | Archives | [React App](../modules/archives/index.md) | Open Archive files directly with Chromium                                      | Readability files can be opened with a text editor.               |
 | Map      | [React App](../modules/map/index.md)      | Map is accessible on port `:8084`                                              | None                                                              |
