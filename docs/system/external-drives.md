@@ -1,5 +1,12 @@
 # External USB Drive Configuration
 
+For basic disk mounting, the [Controller](../controller/disks.md) provides a web interface to mount
+drives and configure persistent mounts.
+
+The instructions below are for manual configuration or advanced multi-drive setups.
+
+---
+
 WROLPi expects a single USB drive to be mounted at `/media/wrolpi`. However, multiple drives are supported. WROLPi
 uses special directories to know where to place downloaded files. The config special directories cannot be changed
 and WROLPi will always look for it at `/media/wrolpi/config`

@@ -1,8 +1,16 @@
 # Service Control
 
-WROLPi services are controlled by `systemd`.
+WROLPi services can be managed through the [Controller](../controller/services.md) web interface,
+or via command line using `systemd`.
 
-You can view and control the WROLPi services using these commands:
+## Using the Controller (Recommended)
+
+The Controller provides a web-based interface to start, stop, restart services and view logs.
+See [Service Management](../controller/services.md) for details.
+
+## Command Line
+
+For advanced users or scripting, services can be controlled directly with these commands:
 
 | Service   | Status                                        | Logs                                           | Restart                                        | Stop                                        | Start                                        |
 |-----------|-----------------------------------------------|------------------------------------------------|------------------------------------------------|---------------------------------------------|----------------------------------------------|
