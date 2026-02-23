@@ -17,6 +17,8 @@ This contains the tables for the API.
 | alembic_version  | Tracks Alembic migration.                               |                           | `alembic`                     |
 | archive          | Data about a FileGroup Archive.                         | file_group_id, domain_id  | `modules/archive/models.py`   |
 | channel          | Data about a video Channel.                             |                           | `modules/videos/models.py`    |
+| collection       | A logical grouping of FileGroups.                       | tag_id                    | `wrolpi/collections/models.py`|
+| collection_item  | Links a FileGroup to a Collection.                      | collection_id, file_group_id | `wrolpi/collections/models.py`|
 | directory        | Directories in the media directory.                     |                           | `wrolpi/files/models.py`      |
 | domains          | Groups Archives by shared URL domain.                   |                           | `modules/archive/models.py`   |
 | download         | Data about what should be downloaded and when.          |                           | `wrolpi/downloader.py`        |
