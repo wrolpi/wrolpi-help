@@ -45,6 +45,8 @@ Quick action buttons for system-wide operations:
 - **Reboot** - Reboots the entire system
 - **Shutdown** - Shuts down the system (native mode only)
 
+![Dashboard system actions](dashboard-system-actions.png)
+
 ### Services Table
 
 Lists all WROLPi services with their current status:
