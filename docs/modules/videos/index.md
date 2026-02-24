@@ -37,10 +37,6 @@ video from the WROLPi channel, then your video will be stored in `videos/WROLPi`
     * The file format the video will be encapsulated in.
         * `mp4` is the most universally compatible (but proprietary).
         * `mkv` is an open-standard media format.
-* **Use Browser Profile**
-    * A browser profile is a set of cookies and settings that are used to download videos. This is useful for
-      downloading videos from sites that require authentication or have other restrictions.
-      See [Browser Profiles](#browser-profiles)
 * **Channel Tag**
     * The selected Tag will be applied to any new Channel created in the process of downloading these videos. The
       Channel will be placed in the respective tag directory in the `videos` directory.
@@ -67,30 +63,16 @@ Behavior when downloading videos can be configured in the `Videos > Settings` pa
     * Download the thumbnail for the video, if available.
 * **Extra yt-dlp Arguments**
     * The text here will be split by spaces and passed as extra arguments to yt-dlp.
-* **Browser Profile**
-    * Shows the browser profiles available to the `wrolpi` user. This is passed as the `--cookies-from-browser` argument
-      to yt-dlp.
-* **Always Use Browser Profile**
-    * Will download videos using `--cookies-from-browser` always. This is not recommended!
+* **Sleep Between Requests**
+    * Instructs yt-dlp to sleep between metadata requests. Helps reduce potential throttling.
+* **User Agent**
+    * The browser identity sent with requests. **If using encrypted cookies, select "Use Current Browser" to match the browser your cookies came from.**
 
-## How to Use Browser Profiles
+## Authentication for Downloads
 
-Downloading videos that require authentication or have other restrictions can be done using a browser profile. This is
-done by logging in as the `wrolpi` user, and authenticating in the browser to the site you want to download from.
-
-### Steps to use a browser profile:
-
-1. Boot your Raspberry Pi.
-2. Log in as your user (possibly `pi`)
-3. Open the terminal, change the password of the wrolpi user:
-    * `sudo passwd wrolpi`
-4. Log out of your user using **Menu** > **Logout** > **Logout**
-5. Select the `wrolpi` user in the dropdown.
-6. Launch a browser (Chromium or Firefox) and log in to the site you want to download from.
-7. Navigate to your WROLPi app, you should see the browser profile you just created in `Videos > Settings`
-8. Select the browser profile you just created in `Videos > Settings` and click **Save**.
-
-You can now enable **Use Browser Profile** in the download modal.
+Some video sites require authentication to access age-restricted, subscriber-only, or private content.
+WROLPi supports [Encrypted Cookies](cookies.md) for authentication. Export cookies from your browser
+and upload them encrypted to WROLPi.
 
 ## Download Channels/Playlists
 
