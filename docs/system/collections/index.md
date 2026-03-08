@@ -20,10 +20,10 @@ Examples:
 
 Collections are categorized by kind:
 
-| Kind      | Purpose                            | Default Location             |
-|-----------|------------------------------------|-----------------------------|
-| `channel` | Video channels (YouTube, etc.)     | `/media/wrolpi/videos/`     |
-| `domain`  | Website archives (SingleFile, etc.)| `/media/wrolpi/archives/`   |
+| Kind      | Purpose                             | Default Location          |
+|-----------|-------------------------------------|---------------------------|
+| `channel` | Video channels (YouTube, etc.)      | `/media/wrolpi/videos/`   |
+| `domain`  | Website archives (SingleFile, etc.) | `/media/wrolpi/archives/` |
 
 ## Automatic Collection Creation
 
@@ -92,15 +92,15 @@ Example: A video uploaded in 2024 titled "Tutorial" goes to
 
 ### Template Variables
 
-| Variable          | Description                        |
-|-------------------|------------------------------------|
-| `%(name)s`        | Collection name                    |
-| `%(tag)s`         | Tag name (if tagged)               |
-| `%(kind)s`        | Collection kind (channel/domain)   |
-| `%(upload_year)s` | Year of upload (videos)            |
-| `%(upload_month)s`| Month of upload (videos)           |
-| `%(title)s`       | Video/archive title                |
-| `%(ext)s`         | File extension                     |
+| Variable           | Description                      |
+|--------------------|----------------------------------|
+| `%(name)s`         | Collection name                  |
+| `%(tag)s`          | Tag name (if tagged)             |
+| `%(kind)s`         | Collection kind (channel/domain) |
+| `%(upload_year)s`  | Year of upload (videos)          |
+| `%(upload_month)s` | Month of upload (videos)         |
+| `%(title)s`        | Video/archive title              |
+| `%(ext)s`          | File extension                   |
 
 ## Related Documentation
 

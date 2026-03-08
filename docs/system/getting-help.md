@@ -61,7 +61,7 @@ OK: WROLPi app systemd exists
 OK: WROLPi app service is up
 OK: WROLPi app responded with interface
 OK: Port 80 is occupied
-OK: nginx systemd exists
+OK: Caddy systemd exists
 
 OK: Found map database
 OK: Map database is initialized
@@ -76,8 +76,8 @@ OK: Kiwix app responded
 OK: The media directory exists
 OK: Can modify media directory
 OK: Media directory is a mounted drive
-OK: Media directory files are served by nginx
-OK: Config can be fetched from nginx
+OK: Media directory files are served by Caddy
+OK: Config can be fetched from Caddy
 OK: Media directory is owned by wrolpi user
 
 OK: Singlefile can be run

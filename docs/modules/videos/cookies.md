@@ -28,7 +28,8 @@ into the video site. The easiest method is using a browser extension.
 
 #### cookies.txt (Chrome/Brave/Edge)
 
-1. Install [cookies.txt](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg) from the Chrome Web Store
+1. Install [cookies.txt](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg) from the
+   Chrome Web Store
 2. Navigate to the video site and log in
 3. Click the extension icon
 4. Click **Copy** to copy the cookies to your clipboard
@@ -125,25 +126,25 @@ If downloads fail even with unlocked cookies:
 
 ## File Locations
 
-| Item | Location |
-|------|----------|
+| Item              | Location                                   |
+|-------------------|--------------------------------------------|
 | Encrypted cookies | `{media_directory}/config/cookies.txt.enc` |
-| Temporary files | `/dev/shm/w_*.tmp` (RAM-based) |
+| Temporary files   | `/dev/shm/w_*.tmp` (RAM-based)             |
 
 ## Security Details
 
 WROLPi implements several security measures to protect your cookies:
 
-| Feature | Implementation |
-|---------|----------------|
-| **Encryption Algorithm** | Fernet (AES-128-CBC + HMAC-SHA256) |
-| **Key Derivation** | PBKDF2-SHA256 with 480,000 iterations |
-| **Salt** | 16 bytes random per encryption |
-| **Password Minimum** | 8 characters |
-| **Storage Location** | Encrypted file only; never plaintext on disk |
-| **Memory Storage** | RAM-based temporary files (`/dev/shm`) |
-| **Temp File Permissions** | `0o600` (owner-only) |
-| **Secure Deletion** | Overwrite with zeros before unlinking |
+| Feature                   | Implementation                               |
+|---------------------------|----------------------------------------------|
+| **Encryption Algorithm**  | Fernet (AES-128-CBC + HMAC-SHA256)           |
+| **Key Derivation**        | PBKDF2-SHA256 with 480,000 iterations        |
+| **Salt**                  | 16 bytes random per encryption               |
+| **Password Minimum**      | 8 characters                                 |
+| **Storage Location**      | Encrypted file only; never plaintext on disk |
+| **Memory Storage**        | RAM-based temporary files (`/dev/shm`)       |
+| **Temp File Permissions** | `0o600` (owner-only)                         |
+| **Secure Deletion**       | Overwrite with zeros before unlinking        |
 
 ### How Encryption Works
 
