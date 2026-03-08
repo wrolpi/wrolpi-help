@@ -16,7 +16,7 @@ The following services are managed by the Controller:
 | renderd           | -      | Map tile rendering               |
 | apache2           | -      | Map tile server                  |
 | postgresql        | -      | Database server                  |
-| nginx             | 80/443 | Web server and reverse proxy     |
+| caddy             | 80/443 | Web server and reverse proxy     |
 
 Development services (shown only when running):
 
@@ -36,7 +36,7 @@ service is running.
 ### Stopping a Service
 
 Click the **Stop** button to stop a running service. Use caution when stopping critical services
-like nginx or postgresql.
+like Caddy or postgresql.
 
 ![Service stop button](services-stop-button.png)
 
@@ -95,22 +95,19 @@ In Docker deployments, the Controller manages Docker containers instead of syste
 
 ### Docker Container Architecture
 
-Docker mode uses HTTPS proxy containers to expose services securely:
+Caddy handles HTTPS termination and reverse proxying for all services in a single `web` container:
 
-| Service | Internal Container | HTTPS Proxy  | Port |
-|---------|--------------------|--------------|------|
-| Help    | `help`             | `help_https` | 8086 |
-| Map     | `map`              | `map_https`  | 8084 |
-| Kiwix   | `zim`              | `zim_https`  | 8085 |
-| Archive | -                  | `archive`    | 8083 |
-
-Other containers:
-
-- `api` - Backend API (port 8081)
-- `app` - React frontend
-- `controller` - Controller service (port 8087)
-- `db` - PostgreSQL database (port 5432)
-- `web` - Nginx reverse proxy (port 8443)
+| Container    | Port | Description                    |
+|--------------|------|--------------------------------|
+| `web`        | 8443 | Caddy reverse proxy (HTTPS)    |
+| `web`        | 8080 | Caddy landing page (HTTP)      |
+| `api`        | 8081 | Backend API                    |
+| `app`        | -    | React frontend                 |
+| `controller` | 8087 | Controller service             |
+| `db`         | 5432 | PostgreSQL database            |
+| `help`       | 8086 | Help documentation (via Caddy) |
+| `map`        | 8084 | Map tile server (via Caddy)    |
+| `zim`        | 8085 | Kiwix wiki server (via Caddy)  |
 
 *The following screenshot is from a healthy WROLPi running in Docker containers*
 

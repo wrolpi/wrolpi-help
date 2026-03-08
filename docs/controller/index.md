@@ -33,7 +33,7 @@ This dashboard works even when the main WROLPi app is down.
 
 ### During Upgrades
 
-When WROLPi is upgrading, nginx automatically redirects to the Controller dashboard so you can monitor the
+When WROLPi is upgrading, Caddy automatically redirects to the Controller dashboard so you can monitor the
 upgrade progress and system status.
 
 ## Features

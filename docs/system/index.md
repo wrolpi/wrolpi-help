@@ -75,9 +75,9 @@ If using the Docker containers (the development environment), you may have addit
 
 ### Development Web
 
-| Software Project            | Purpose                                                       |
-|-----------------------------|---------------------------------------------------------------|
-| [nginx](https://nginx.org/) | Facilitates integration between development docker containers |
+| Software Project                  | Purpose                                                       |
+|-----------------------------------|---------------------------------------------------------------|
+| [Caddy](https://caddyserver.com/) | Facilitates integration between development docker containers |
 
 ### Archive
 

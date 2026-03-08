@@ -66,7 +66,8 @@ Behavior when downloading videos can be configured in the `Videos > Settings` pa
 * **Sleep Between Requests**
     * Instructs yt-dlp to sleep between metadata requests. Helps reduce potential throttling.
 * **User Agent**
-    * The browser identity sent with requests. **If using encrypted cookies, select "Use Current Browser" to match the browser your cookies came from.**
+    * The browser identity sent with requests. **If using encrypted cookies, select "Use Current Browser" to match the
+      browser your cookies came from.**
 
 ## Authentication for Downloads
 
