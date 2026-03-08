@@ -15,6 +15,7 @@ Information about a WROLPi system.
 * [Systems](system/index.md)
 * [Recommended Hardware](system/recommended-hardware.md)
 * [External USB Drives](system/external-drives.md)
+* [HTTPS Certificates](system/certificates.md)
 
 ## Modules
 
