@@ -25,6 +25,7 @@ Information about the parts of the WROLPi interface.
 * [Videos](modules/videos/index.md)
     * [Encrypted Cookies](modules/videos/cookies.md)
 * [Archives](modules/archives/index.md)
+* [Docs](modules/docs/index.md)
 * [Map](modules/map/index.md)
 * [Zim](modules/zim/index.md)
 

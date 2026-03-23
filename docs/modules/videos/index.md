@@ -169,6 +169,24 @@ When the indexes for a Video are generated for searching, they are searched in t
 2. Description
 3. Subtitles
 
+## Captions
+
+When a video has captions (VTT or SRT files), they are displayed in the **Captions** tab on the video detail page.
+You can click the timestamp to scrub the video to that location.
+
+![video-captions.png](video-captions.png)
+
+### Scrubbing by Caption
+
+Each caption line has a clickable timestamp link on the left side. Clicking a timestamp will jump the video to
+that point, making it easy to navigate long videos by their spoken content.
+
+### Filtering Captions
+
+A filter input at the top of the captions tab allows you to search through the caption text. Type one or more
+words to narrow the list to only captions containing all of those words. This is useful for finding a specific
+topic or quote in a long video.
+
 ## Videos without WROLPi
 
 WROLPi comes with VLC pre-installed, this application allows you to watch video files, even if the React App is not

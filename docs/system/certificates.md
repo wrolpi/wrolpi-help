@@ -20,6 +20,16 @@ WROLPi uses a two-level certificate system:
    when your WROLPi's hostname or IP address changes. Because your devices already trust the Root CA, they will
    automatically trust any new leaf certificate.
 
+### First Startup (Temporary Certificate)
+
+On a fresh install, no media drive is mounted yet and no Root CA exists. WROLPi generates a **temporary self-signed
+certificate** so that Caddy can serve HTTPS immediately. This allows the browser to reach the Controller for
+[onboarding](getting-started.md#onboarding), though you will see a browser certificate warning that must be accepted.
+
+Once onboarding completes and the repair script runs, proper Root CA and leaf certificates are generated and the
+temporary certificate is replaced. After installing the Root CA on your devices, the browser warning will not appear
+again.
+
 ## Downloading the Root CA Certificate
 
 You can download the Root CA certificate from:
