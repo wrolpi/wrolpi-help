@@ -26,7 +26,7 @@ the React UI.
 The Controller has its own standalone web interface available at:
 
 ```
-http://<your-wrolpi-ip>:8087
+http://<your-wrolpi-ip>
 ```
 
 This dashboard works even when the main WROLPi app is down.

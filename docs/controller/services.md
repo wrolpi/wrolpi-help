@@ -8,7 +8,7 @@ The following services are managed by the Controller:
 
 | Service           | Port   | Description                      |
 |-------------------|--------|----------------------------------|
-| wrolpi-controller | 8087   | System management (this service) |
+| wrolpi-controller | 80     | System management (this service) |
 | wrolpi-api        | 8081   | Backend API server               |
 | wrolpi-app        | 5000   | React frontend application       |
 | wrolpi-help       | 8084   | Documentation server             |
@@ -100,10 +100,9 @@ Caddy handles HTTPS termination and reverse proxying for all services in a singl
 | Container    | Port | Description                    |
 |--------------|------|--------------------------------|
 | `web`        | 8443 | Caddy reverse proxy (HTTPS)    |
-| `web`        | 8080 | Caddy landing page (HTTP)      |
 | `api`        | 8081 | Backend API                    |
 | `app`        | -    | React frontend                 |
-| `controller` | 8087 | Controller service             |
+| `controller` | 8080 | Controller service (HTTP)      |
 | `db`         | 5432 | PostgreSQL database            |
 | `help`       | 8086 | Help documentation (via Caddy) |
 | `map`        | 8084 | Map tile server (via Caddy)    |
