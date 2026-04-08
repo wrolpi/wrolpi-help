@@ -15,7 +15,7 @@
 ### Web
 
 The [Caddy](https://caddyserver.com/) web server which facilitates communication between the other services, handles
-HTTPS with [self-signed certificates](certificates.md), and serves the landing page.
+HTTPS with [self-signed certificates](certificates.md).
 
 ### API
 

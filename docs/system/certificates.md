@@ -34,7 +34,7 @@ again.
 
 You can download the Root CA certificate from:
 
-* The HTTP landing page at `http://<your-wrolpi-address>/` (or `http://<your-wrolpi-address>:8080/` for Docker)
+* The Controller at `http://<your-wrolpi-address>/` (or `http://<your-wrolpi-address>:8080/` for Docker)
 * The Settings page in the WROLPi interface under **Configs**
 * Directly at `http://<your-wrolpi-address>/ca.crt`
 

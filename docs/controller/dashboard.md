@@ -8,7 +8,7 @@ application. This ensures you always have access to critical system information 
 The dashboard is available at:
 
 ```
-http://<your-wrolpi-ip>:8087
+http://<your-wrolpi-ip>
 ```
 
 ## When to Use the Dashboard
@@ -71,6 +71,10 @@ Shows detected drives and partitions:
 - Mount/unmount controls
 - Persistent mount toggle
 
+> Notice the drive mounted to **/media/wrolpi**
+
+![dashboard-disk-management.png](dashboard-disk-management.png)
+
 ### Drive Health (SMART)
 
 Displays health information for connected drives:
@@ -80,6 +84,8 @@ Displays health information for connected drives:
 - Power-on hours
 - Sector health
 
+![dashboard-smart.png](dashboard-smart.png)
+
 ## Fallback Mode
 
 When the main WROLPi API is unavailable, the dashboard enters "fallback mode":
@@ -87,6 +93,8 @@ When the main WROLPi API is unavailable, the dashboard enters "fallback mode":
 - A notice appears indicating the main app is down
 - The dashboard continues to function normally
 - Once the main app recovers, you're automatically redirected
+
+![dashboard-fallback-banner.png](dashboard-fallback-banner.png)
 
 ## Upgrade Mode
 
