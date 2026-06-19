@@ -34,7 +34,8 @@ To create an inventory, click the **+** button, enter a name, choose a type, and
 
 Use the dropdown at the top of the page to switch between inventories. The buttons beside it let you rename the
 current inventory (the pencil), customize its [Fields](#customizing-fields), open the
-[Food Catalog](#food-catalog), or delete the inventory (the red trash button).
+[Food Catalog](#food-catalog), [import or restore](#importing-and-restoring) the inventory (the **Restore**
+button), or delete the inventory (the red trash button).
 
 ## Adding Items
 
@@ -117,6 +118,25 @@ landscape (or use a tablet or desktop) for the full spreadsheet editor. You choo
 mobile view with the **Mobile** toggle in the [Fields](#customizing-fields) editor.
 
 ![inventory-mobile.png](inventory-mobile.png)
+
+## Importing and Restoring
+
+The **Restore** button opens a dialog with two ways to recover or refresh an inventory.
+
+![inventory-restore.png](inventory-restore.png)
+
+**Re-import from disk** reloads every inventory from its [config file](#where-data-is-stored). Use this after you
+edit a file by hand, or after copying an inventory file in from another WROLPi — your changes are picked up without
+a restart.
+
+**Restore from a backup** uses the dated backups WROLPi saves automatically whenever an inventory changes. Pick a
+date, then choose:
+
+* **Merge** — add items from the backup that aren't already present, keeping your current items and fields.
+* **Overwrite** — replace the inventory entirely with the backup.
+
+A preview shows exactly what will change before you apply it. The restore is itself backed up first, so it can be
+undone by restoring the most recent backup.
 
 ## Where Data Is Stored
 
