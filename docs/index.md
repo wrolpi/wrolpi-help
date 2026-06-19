@@ -28,6 +28,10 @@ Information about the parts of the WROLPi interface.
 * [Docs](modules/docs/index.md)
 * [Map](modules/map/index.md)
 * [Zim](modules/zim/index.md)
+* [Inventory](modules/inventory/index.md)
+    * [Summary](modules/inventory/summary.md)
+    * [Ration](modules/inventory/ration.md)
+    * [Export](modules/inventory/export.md)
 
 ## Guiding Principals
 

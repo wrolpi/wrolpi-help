@@ -38,6 +38,26 @@ https://your-wrolpi/map?lat=45.5231&lon=-122.6765&z=12
 
 Share this URL to link someone directly to a specific location and zoom level.
 
+### Search
+
+Type in the search box at the top center of the map to find places by name.
+
+- **Place search** — Type a city, town, park, or region name. Results appear in a dropdown
+  showing the place name, administrative region (e.g., "Oregon"), and population.
+- **Coordinate search** — Type coordinates like `45.5, -122.6` to navigate directly to
+  that location.
+- **Proximity bias** — Results are sorted by proximity to your current map view, so nearby
+  places appear first.
+- **Prefix matching** — Typing partial names works (e.g., "Port" finds "Portland").
+- **Fuzzy fallback** — If no exact match is found, a broader substring search is attempted.
+
+Click a result to fly to that location with a marker and popup. Press Escape to close the
+dropdown.
+
+> Search data is extracted from the same PMTiles map files you already have. No additional
+> downloads are needed. When search indexes include Wikidata enrichment, results show
+> administrative regions (state/province) to help distinguish places with the same name.
+
 ## Pins Tab
 
 Map pins let you mark and name important locations. Pins are stored in `map_pins.yaml`
@@ -64,7 +84,17 @@ The Manage tab has two sections:
 ### Map Files
 
 Lists all `.pmtiles` files in your media directory under `/map`. Shows the file name, size,
-and modification time. Files can be deleted from here.
+search index status, and a delete button. Files can be deleted from here.
+
+The **Search** column shows whether a search index exists for each file:
+
+- **Built** (green) — A search index exists. Place search is available for this file.
+- **Build** (button) — No search index yet. Click to generate one using `tippecanoe-decode`.
+  If WROL Mode is not active, the index will also be enriched with region names from Wikidata.
+
+> Search indexes are small SQLite databases (typically 1-4 MB per region) stored alongside
+> the PMTiles file with a `.search.db` extension. They are created automatically when you
+> download a region via subscriptions, or you can build them manually with the Build button.
 
 ### Map Subscriptions
 
@@ -90,6 +120,8 @@ When you subscribe to a region:
    is authentic and untampered
 5. The file is placed in your map directory with a versioned filename
    (e.g., `us-west-20260329.pmtiles`)
+6. A pre-built search index (`.search.db`) is downloaded from the CDN, also with
+   GPG-signed hash verification. This provides instant place search with region names.
 
 > Downloads are integrity-verified at multiple levels: the manifest is GPG-signed,
 > each file's SHA-256 hash is GPG-signed in its meta4 file, and aria2c verifies
@@ -169,3 +201,12 @@ Once a terrain file is detected, two additional layer groups appear in the Layer
 
 > Terrain layers are hidden by default to keep the map clean. Enable them in the Layer Control
 > when you need elevation information.
+
+## Global Search
+
+Map places also appear in WROLPi's global search. When you search from the navigation bar:
+
+- The **Map** tab shows the number of matching map places alongside Files, Zims, and Other
+- Clicking the Map tab displays results as cards with mini map previews showing each location
+- Click a card to navigate to that location on the map page
+- Results are paginated (12 per page) with the same region and population information
