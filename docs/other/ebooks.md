@@ -1,20 +1,24 @@
 # eBooks
 
-eBooks are a secondary file type in WROLPi, which means that they do not yet have a dedicated module, and some features
-may not yet be available.
+eBooks are managed by the [Docs module](../modules/docs/index.md), where they can be browsed, filtered by author and
+subject, searched, and read directly in the browser with the built-in EPUB reader.
 
-Epub files are desired as ebooks, though some support for Mobi files is provided. Reasons why WROLPi supports Epub:
+Epub files are desired as ebooks, though some support for Mobi files is provided. Reasons why WROLPi prefers Epub:
 
 * Epub files are simple. An Epub file is a zip file containing HTML files.
 * Third-party support for reading Epubs is much more feature-rich.
 * Images are files in the Epub zip.
-* Device supports for Epubs is nearly ubiquitous.
+* Device support for Epubs is nearly ubiquitous.
 * Because an Epub contains HTML files, it makes it easy to display them in a web browser.
+
+Cover images are detected automatically — including Calibre-style directories with a `cover.jpg` — see
+[Cover Images](../modules/docs/index.md#cover-images).
 
 ## Searching
 
-When indexes for an EPUB are generated, they are searched in the following order of precedence:
+When indexes for an eBook are generated, they are searched in the following order of precedence:
 
 1. Title
 2. Author
-3. eBook contents
+3. File name
+4. eBook contents

@@ -11,7 +11,7 @@ Follow these steps to automate backup of your WROLPi.
     - `sudo -u wrolpi passwd`
 2. SSH/login into the backup WROLPi
     1. Switch to the "wrolpi" user:
-        - `sudo su - wropi`
+        - `sudo su - wrolpi`
     2. Generate SSH keys for the wrolpi user:
         - `ssh-keygen`
     3. Copy ssh keys to the primary WROLPi (using the password from step 1)
@@ -21,7 +21,7 @@ Follow these steps to automate backup of your WROLPi.
     5. Copy all files from the primary to the backup
         - `rsync -avrle ssh wrolpi@PRIMARY_IP_ADDRESS:/media/wrolpi/* /media/wrolpi`
 
-Files are now synchronized, now you need to automate it. Copy/paste the following into the shell of the backup WROLPI,
+Files are now synchronized, now you need to automate it. Copy/paste the following into the shell of the backup WROLPi,
 it will create a bash script that will copy files from the primary to the backup WROLPi.
 
 ```shell

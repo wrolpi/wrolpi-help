@@ -32,24 +32,54 @@ fallback UI. Your browser will be redirected to the Controller where you can com
 After onboarding, you should install the [HTTPS certificate](certificates.md) on your devices to avoid the
 browser warning on future visits.
 
-# Creating a new WROLPi
+## Creating a new WROLPi
 
-## Raspberry Pi
+The following sections are the steps necessary to create a new WROLPi, either as a backup, or to restore your WROLPi
+on new hardware.
 
-The following instructions are the steps necessary to create a new WROLPi, either as a backup, or to restore your WROLPi
-on a new Raspberry Pi.
+### WROLPi Portable (Live USB)
 
-### Image an SD Card on Linux
+WROLPi Portable is a bootable image that runs a complete WROLPi directly off a USB drive on any x86 PC or laptop —
+nothing is installed to the computer's internal disk. On the first boot it creates a `persistence` partition on the
+USB drive so your library, database, and configuration survive reboots.
+
+You will need:
+
+* A USB drive of at least 16 GB (32 GB+ recommended so there is room for your library).
+* An x86 PC or laptop that can boot from USB.
+
+Steps:
+
+1. Download the latest `WROLPi-v*-amd64.iso` from [wrolpi.org](https://wrolpi.org).
+2. Flash the whole drive with the ISO using [Raspberry Pi Imager](https://www.raspberrypi.com/software/), Rufus, or `dd`:
+    * `sudo dd if=WROLPi-v<version>-amd64.iso of=/dev/sdX bs=4M status=progress conv=fsync`
+    * (Replace `/dev/sdX` with your USB drive. **This erases the whole drive.**)
+3. Boot the PC from the USB drive. At the boot menu, choose **Run WROLPi (live)**.
+4. The first boot sets WROLPi up automatically: it creates the persistence partition, initializes the database, and
+   starts the services. This takes a minute or two; progress is shown on screen.
+5. Once the desktop loads, browse to `https://wrolpi.local` or the IP address of your WROLPi.
+
+**Warning!** Booting the ISO from a multiboot tool (Ventoy, YUMI, Easy2Boot, etc.) runs **ephemerally** — your library
+lives in RAM and is lost on reboot, because WROLPi cannot safely write a persistence partition onto a multiboot stick.
+A dialog warns you on the first boot when this happens. For persistent use, flash the ISO directly to its own drive as
+shown above.
+
+> The same boot menu also offers **Install** / **Graphical Install** entries that run the standard Debian Installer if
+> you would rather install WROLPi onto the computer's internal disk. See the [Debian](#debian) section below.
+
+### Raspberry Pi
+
+#### Image an SD Card on Linux
 
 1. Plug in your SD card, find its device path with: `sudo blkid`
 2. Extract and copy the WROLPi image to your drive (/dev/sdb in this example):
-    * `xzcat WROLPi-v0.19-aarch64-desktop.img.xz | sudo dd of=/dev/sdb status=progress`
+    * `xzcat WROLPi-v<version>-aarch64-desktop.img.xz | sudo dd of=/dev/sdb status=progress`
 
-### Image an SD Card on Windows
+#### Image an SD Card on Windows
 
 1. Copy the WROLPi image to your micro SD card using [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-### First Boot
+#### First Boot
 
 1. Unplug your Raspberry Pi
 2. Insert the micro SD card into your Raspberry Pi
@@ -66,10 +96,7 @@ on a new Raspberry Pi.
 13. A browser will open automatically. Follow the [Onboarding](#onboarding) steps above to select your drive and
     complete the installation.
 
-## Debian
-
-The following instructions are the steps necessary to create a new WROLPi, either as a backup, or to restore your WROLPi
-on a new Debian computer.
+### Debian
 
 1. Copy the Debian WROLPi ISO to a thumb-drive.
 2. Insert the thumb-drive into the laptop, boot to the thumb-drive.

@@ -44,6 +44,8 @@ The tool buttons are as displayed:
 
 ## Tags
 
+See [Tags](../../system/tags.md) for everything about tagging.
+
 WROLPi creates and manages a `tags` directory, this directory contains links to files you have tagged. This is the
 [secondary](../../system/primary-secondary-tertiary.md) method to access your tags.  **You should never manually add
 files to this directory, they will be deleted.**
@@ -54,7 +56,7 @@ separated by commas (alphabetically). For example, if you tagged a video at
 then a link to the video will be created in
 `tags/Computers, WROL/WROLPi_20230909_0xfMLNVFq2Y_WROLPi v0.11 beta demo.mp4`
 
-All files in the **FileGroup** will be linked in the same directory.
+All files in the [FileGroup](../../system/filegroups.md) will be linked in the same directory.
 
 ## File Preview
 

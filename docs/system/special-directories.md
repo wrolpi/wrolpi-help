@@ -23,14 +23,14 @@ The normal media directory is `/media/wrolpi`
 `/media/wrolpi/config/`
 
 This directory contains the configuration files of the WROLPi. These files are considered the "source of truth" and
-their contents will alter the behavior of the WROLPi.
+their contents will alter the behavior of the WROLPi.  See [How Configs Work](configs.md).
 
 ## Tags Directory
 
 `/media/wrolpi/tags`
 
 This directory contains links to tagged files. It is automatically managed by WROLPi as you add or remove tags from
-files.
+files.  See [Tags](tags.md).
 
 **Warning!**  Do not store files in this directory, they will be automatically deleted.
 
