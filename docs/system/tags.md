@@ -14,7 +14,13 @@ You can tag:
 
 Tags are managed from the **Dashboard**. The Dashboard shows all of your Tags; click **Edit** to open the Tag editor.
 
-The Tag editor shows every Tag with counts of how many Files, Zims, Channels, and Domains use it. From here you can:
+![The Tags section of the Dashboard](tags-dashboard.png)
+
+The Tag editor shows every Tag with counts of how many Files, Zims, Channels, and Domains use it.
+
+![The Tag editor](edit-tags-modal.png)
+
+From here you can:
 
 1. **Create** a new Tag by entering a name and choosing a color (or click **Random** for a distinct color). A preview
    shows what the Tag will look like.

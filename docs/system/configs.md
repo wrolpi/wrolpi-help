@@ -49,6 +49,8 @@ restores everything you curated.
 > The **Settings page has a Configs table** that shows every config file, whether it imported successfully, and lets
 > you import or save each one manually.
 
+![The Configs table on the Settings page](configs-table.png)
+
 ## Editing Configs by Hand
 
 You can edit any config file with a text editor — this is a supported way to make changes (for example, adding many

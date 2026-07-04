@@ -8,6 +8,8 @@ page.
 
 The Download menu offers a form for each kind of download:
 
+![The Download menu](download-menu.png)
+
 * **Videos** — download one or more videos (one URL per line) using yt-dlp. Options include Tags, a destination
   directory, audio-only (with audio format), preferred resolutions, and video format. See
   [Videos](../videos/index.md).
@@ -41,6 +43,8 @@ A Download either runs **once**, or **recurs** on a frequency (hourly up to ever
 ## The Downloads Page
 
 The Downloads page has two tables: **Downloads** (once) and **Recurring Downloads**.
+
+![The Downloads page](downloads-page.png)
 
 Each download has a status:
 
