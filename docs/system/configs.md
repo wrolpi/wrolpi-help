@@ -30,6 +30,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `fstab.yaml` | The WROLPi-managed mount table for your drives. |
 | `backup/` | Automatic dated backups of your configs (see below). |
 | `ssl/` | Your generated [HTTPS certificates](certificates.md). |
+| `wrolpi.db` | The [SQLite database](databases.md) (search index; rebuilt from files + configs). |
 
 ## The Source-of-Truth Model
 

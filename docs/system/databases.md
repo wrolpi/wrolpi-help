@@ -1,16 +1,20 @@
-# Databases
+# Database
 
-WROLPi has two major Postgresql databases, the main (API) database, and the map database.
+WROLPi uses a single [SQLite](https://sqlite.org/) database stored in the media directory.
+There is no separate database service — the API opens the file directly.
 
-## Main Database
+## Location
 
-This contains the tables for the API.
+`/media/wrolpi/config/wrolpi.db`
 
-### Service
+The database lives next to the [YAML config files](configs.md) so a user's entire library
+(files + configs + database) travels with the media drive. WAL sidecars (`wrolpi.db-wal`,
+`wrolpi.db-shm`) may appear alongside it while the API is running.
 
-`postgresql@15-main.service`
+The database is created automatically on first API start. To wipe and rebuild it (you will need
+to refresh your files afterward), see [Reset API Database](getting-help.md#reset-api-database).
 
-### Tables
+## Tables
 
 | Name             | Purpose                                                 | Relations                    | `/opt/wrolpi` File             |
 |------------------|---------------------------------------------------------|------------------------------|--------------------------------|
@@ -26,7 +30,7 @@ This contains the tables for the API.
 | file_group       | Each record is a group of files that share a stem.      |                              | `wrolpi/files/models.py`       |
 | inventory        | A collection of items.                                  |                              | `modules/inventory/models.py`  |
 | item             | An item in an inventory.                                | inventory_id                 | `modules/inventory/models.py`  |
-| map_file         | Data about PBF files (if they have been imported, etc.) |                              | `modules/map/models.py`        |
+| map_file         | Data about map files (if they have been imported, etc.) |                              | `modules/map/models.py`        |
 | tag              | Data about a Tag (name, color, etc.)                    |                              | `wrolpi/tags.py`               |
 | tag_file         | A FileGroup that has been tagged.                       | tag_id, file_group_id        | `wrolpi/tags.py`               |
 | tag_zim          | An entry (article) that was tagged in a Zim file.       | tag_id, zim_id, zim_entry    | `modules/zim/models.py`        |
@@ -35,10 +39,9 @@ This contains the tables for the API.
 | zim              | A Zim file                                              |                              | `modules/zim/models.py`        |
 | zim_subscription | A recurring download of a Zim file.                     |                              | `modules/zim/models.py`        |
 
-## Map Database
+Full-text search uses SQLite FTS5 virtual tables (created alongside the main schema).
 
-This contains tables for the OpenStreetMap.
+## Maps
 
-### Service
-
-`postgresql@15-map.service`
+Map data is **not** stored in this database. Maps use PMTiles files under `/media/wrolpi/map/`,
+served by Caddy. See the [Map module](../modules/map/index.md).

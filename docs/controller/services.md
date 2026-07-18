@@ -10,13 +10,11 @@ The following services are managed by the Controller:
 |-------------------|--------|----------------------------------|
 | wrolpi-controller | 80     | System management (this service) |
 | wrolpi-api        | 8081   | Backend API server               |
-| wrolpi-app        | 5000   | React frontend application       |
-| wrolpi-help       | 8084   | Documentation server             |
+| wrolpi-app        | 3000   | React frontend application       |
+| wrolpi-help       | 8086   | Documentation server             |
 | wrolpi-kiwix      | 8085   | Offline wiki server (Kiwix)      |
-| renderd           | -      | Map tile rendering               |
-| apache2           | -      | Map tile server                  |
-| postgresql        | -      | Database server                  |
 | caddy             | 80/443 | Web server and reverse proxy     |
+| smbd / nmbd       | 445    | Samba file sharing               |
 
 Development services (shown only when running):
 
@@ -36,7 +34,7 @@ service is running.
 ### Stopping a Service
 
 Click the **Stop** button to stop a running service. Use caution when stopping critical services
-like Caddy or postgresql.
+like Caddy.
 
 ![Service stop button](services-stop-button.png)
 
@@ -103,10 +101,11 @@ Caddy handles HTTPS termination and reverse proxying for all services in a singl
 | `api`        | 8081 | Backend API                    |
 | `app`        | -    | React frontend                 |
 | `controller` | 8080 | Controller service (HTTP)      |
-| `db`         | 5432 | PostgreSQL database            |
 | `help`       | 8086 | Help documentation (via Caddy) |
-| `map`        | 8084 | Map tile server (via Caddy)    |
 | `zim`        | 8085 | Kiwix wiki server (via Caddy)  |
+| `samba`      | 445  | Samba file sharing             |
+
+The API database is SQLite at `/media/wrolpi/config/wrolpi.db` (no database container).
 
 *The following screenshot is from a healthy WROLPi running in Docker containers*
 

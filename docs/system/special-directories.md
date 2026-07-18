@@ -22,8 +22,9 @@ The normal media directory is `/media/wrolpi`
 
 `/media/wrolpi/config/`
 
-This directory contains the configuration files of the WROLPi. These files are considered the "source of truth" and
-their contents will alter the behavior of the WROLPi.  See [How Configs Work](configs.md).
+This directory contains the configuration files of the WROLPi and the SQLite database (`wrolpi.db`). Config files
+are considered the "source of truth" and their contents will alter the behavior of the WROLPi.
+See [How Configs Work](configs.md) and [Databases](databases.md).
 
 ## Tags Directory
 
@@ -38,8 +39,8 @@ files.  See [Tags](tags.md).
 
 `/opt/wrolpi-blobs/`
 
-This directory contains the files necessary to repair a WROLPi. For example, the `map-db-gis.dump` file contains a
-Postgresql dump of the map database.  **It is best to leave this directory as-is.**
+This directory contains files necessary to repair a WROLPi (for example map fonts and other offline assets).
+**It is best to leave this directory as-is.**
 
 ## WROLPi Help
 

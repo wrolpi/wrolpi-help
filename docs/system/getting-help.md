@@ -34,19 +34,23 @@ Example output:
 ```text
 WROLPi version: 0.13.1-beta
 
-OK: Running on Raspberry Pi
+OK: Running on Raspberry Pi 5
 OK: Found wrolpi user
 OK: The WROLPi directory exists
 OK: The WROLPi blobs directory exists
 OK: The WROLPi main script exists
 OK: The WROLPi config file exists
 
-OK: Postgres found
-OK: Port 5432 is occupied
-OK: Postgres is using file socket
-OK: Found wrolpi database
+OK: Found wrolpi database at /media/wrolpi/config/wrolpi.db
+OK: WROLPi database passes quick_check
 OK: WROLPi database is initialized
 OK: WROLPi database has files
+
+OK: Controller Python virtual environment exists
+OK: WROLPi Controller systemd exists
+OK: WROLPi Controller service is up
+OK: WROLPi Controller health check passed
+OK: WROL Mode is inactive
 
 OK: WROLPi Python virtual environment exists
 OK: WROLPi main can be run
@@ -59,16 +63,16 @@ OK: WROLPi app directory exists
 OK: WROLPi app exists
 OK: WROLPi app systemd exists
 OK: WROLPi app service is up
-OK: WROLPi app responded with interface
-OK: Port 80 is occupied
-OK: Caddy systemd exists
+OK: WROLPi app responded with UI
 
-OK: Found map database
-OK: Map database is initialized
-OK: renderd systemd exists
-OK: Map app responded
-OK: Map initialization blob exists
-OK: Leaflet.js exists
+OK: Caddy is installed
+OK: Caddy systemd exists
+OK: Caddy service is running
+OK: Caddy HTTPS proxy responded on :443
+
+OK: Map viewer responded
+OK: Map static assets exist
+OK: Found 3 PMTiles map files
 
 OK: The kiwix library file exists
 OK: Kiwix app responded
@@ -76,8 +80,8 @@ OK: Kiwix app responded
 OK: The media directory exists
 OK: Can modify media directory
 OK: Media directory is a mounted drive
-OK: Media directory files are served by Caddy
-OK: Config can be fetched from Caddy
+OK: Media directory files are served by caddy
+OK: Config can be fetched from caddy
 OK: Media directory is owned by wrolpi user
 
 OK: Singlefile can be run
@@ -91,7 +95,7 @@ OK: Help mkdocs can be run
 OK: Help service is running
 
 OK: Can ping 1.1.1.1
-OK: Can ping wrolpi.org
+OK: Can ping one.one.one.one
 ```
 
 The output above will help an experienced developer narrow down the cause of an issue.
@@ -100,8 +104,8 @@ The output above will help an experienced developer narrow down the cause of an 
 
 ### Reset API Database
 
-The `wrolpi` database contains the tables and indexes which allow you to search or even browse your WROLPi. A script is
-provided which will delete and re-create this database.  **Warning you will need to refresh your files!**  Run it if the
-repair script above fails:
+The SQLite database at `/media/wrolpi/config/wrolpi.db` contains the tables and indexes which allow you to search or
+browse your WROLPi. A script is provided which will delete this database (the API recreates it on next start).
+**Warning: you will need to refresh your files!** Run it if the repair script above fails:
 
 `/opt/wrolpi/scripts/reset_api_db.sh`

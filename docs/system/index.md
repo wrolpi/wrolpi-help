@@ -33,9 +33,11 @@ HTTPS with [self-signed certificates](certificates.md).
 
 ### DB
 
-| Software Project                          | Purpose                                                              |
-|-------------------------------------------|----------------------------------------------------------------------|
-| [Postgresql](https://www.postgresql.org/) | Facilitates searching of files, scheduling downloads, and much more. |
+| Software Project              | Purpose                                                              |
+|-------------------------------|----------------------------------------------------------------------|
+| [SQLite](https://sqlite.org/) | Facilitates searching of files, scheduling downloads, and much more. |
+
+The database file lives at `/media/wrolpi/config/wrolpi.db`. See [Databases](databases.md).
 
 ### React App
 
@@ -47,11 +49,11 @@ HTTPS with [self-signed certificates](certificates.md).
 
 ### Map
 
-| Software Project                                | Purpose                                   |
-|-------------------------------------------------|-------------------------------------------|
-| [OpenStreetMap](https://www.openstreetmap.org/) | Provides the Map data.                    |
-| [osmium](https://osmcode.org/osmium-tool/)      | Used to merge map PBF files.              |
-| [osm2pgsql](https://osm2pgsql.org/)             | Used to import PBF files into Postgresql. |
+| Software Project                                | Purpose                                          |
+|-------------------------------------------------|--------------------------------------------------|
+| [OpenStreetMap](https://www.openstreetmap.org/) | Provides the Map data.                           |
+| [PMTiles](https://protomaps.com/)               | Offline map tiles stored as files under `map/`.  |
+| [MapLibre GL JS](https://maplibre.org/)         | Map viewer in the browser.                       |
 
 ### Zim
 
