@@ -45,6 +45,8 @@ Information about the parts of the WROLPi interface.
     * [Summary](modules/inventory/summary.md)
     * [Ration](modules/inventory/ration.md)
     * [Export](modules/inventory/export.md)
+* Calculators
+    * [One-Time Pad](modules/calculators/one-time-pad.md)
 
 ## Other File Types
 
