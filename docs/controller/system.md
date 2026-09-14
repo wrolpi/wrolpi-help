@@ -88,6 +88,31 @@ The hotspot is useful for:
 - Field use without infrastructure
 - Initial setup before configuring WiFi
 
+### Captive Portal
+
+When a phone or laptop joins the hotspot, it checks for Internet access. The WROLPi answers
+that check with a welcome page instead, so the device shows a "Sign in to network" screen
+that reads:
+
+- **This is your WROLPi** and the address to open, for example `10.42.0.1`
+- A **Continue** button
+
+Tap **Continue**. The next page confirms you are connected and offers **Open WROLPi** and
+**Open the Controller**, which open in your normal browser. Tap **Done** in the corner of the
+sign-in screen to keep using the hotspot. The address is also shown under the hotspot button on
+the Controller's Control page, and `http://wrolpi/` reaches the WROLPi from any device on the
+hotspot.
+
+The welcome page does not give the device Internet access; it only tells the device the
+network is ready to use. Restarting the hotspot shows the page to every device again.
+
+**Turning it off:** uncheck **Captive portal** in **Hotspot Settings** and save. Like the
+other hotspot settings, the change applies the next time the hotspot starts, so restart the
+hotspot if it is already running. The setting is `hotspot.captive_portal` in
+`controller.yaml`.
+
+The captive portal is not available in Docker, because Docker has no hotspot.
+
 ## CPU Throttling (Raspberry Pi)
 
 Control CPU performance and power consumption on Raspberry Pi.
