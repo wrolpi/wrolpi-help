@@ -24,6 +24,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `archives_downloader.yaml` | Archive downloader settings. |
 | `download_cache.yaml` | Cached video durations (safe to ignore). |
 | `map_pins.yaml` | Your [Map](../modules/map/index.md) pins. |
+| `bookmarks.yaml` | Your [Bookmarks](../modules/bookmarks/index.md), including their directories and order. |
 | `inventory/*.yaml` | One file per [Inventory](../modules/inventory/index.md), plus the food catalog. |
 | `cookies.txt.enc` | Your [encrypted cookies](../modules/videos/cookies.md). |
 | `controller.yaml` | [Controller](../controller/index.md) settings: drives, Samba shares, hotspot. |
