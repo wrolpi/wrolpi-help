@@ -48,6 +48,7 @@ Information about the parts of the WROLPi interface.
     * [Export](modules/inventory/export.md)
 * Calculators
     * [One-Time Pad](modules/calculators/one-time-pad.md)
+    * [Solar](modules/calculators/solar.md)
     * [Speed Test](modules/calculators/speed-test.md)
 
 ## Other File Types
