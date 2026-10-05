@@ -173,8 +173,16 @@ models PVWatts uses for panel temperature, angle losses, system losses and inver
 
 ## Data source
 
-Sunlight, temperature and ground reflectance come from
-[NASA POWER](https://power.larc.nasa.gov/) 2001–2020 monthly averages, on a 1° grid. The data is licensed
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The data was obtained from the National Aeronautics and
-Space Administration (NASA) Langley Research Center (LaRC) Prediction of Worldwide Energy Resource (POWER) Project,
-funded through the NASA Earth Science/Applied Science Program.
+Sunlight, temperature and ground reflectance come from [NASA POWER](https://power.larc.nasa.gov/) 2001–2020
+monthly averages, on a 1° grid. The data is licensed
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+The data was obtained from National Aeronautics and Space Administration (NASA) Langley Research Center's
+Prediction Of Worldwide Energy Resources (POWER) project funded through the NASA Earth Science Division. The data
+was obtained from the POWER Project's POWER Climatology API v2.10.0 version on 2026/10/04.
+
+WROLPi modified the data: values are rounded to fit one byte each (0.04 kWh/m² per day for irradiance, 0.004 for
+albedo, 0.5 °C for temperature), temperatures are averaged from NASA's 0.5° × 0.625° grid into 1° cells, and the
+calculator interpolates between cells.
+
+> To see this attribution in the calculator, click **Data attribution** under the location.
