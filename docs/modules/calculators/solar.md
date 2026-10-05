@@ -185,4 +185,4 @@ WROLPi modified the data: values are rounded to fit one byte each (0.04 kWh/m² 
 albedo, 0.5 °C for temperature), temperatures are averaged from NASA's 0.5° × 0.625° grid into 1° cells, and the
 calculator interpolates between cells.
 
-> To see this attribution in the calculator, click **Data attribution** under the location.
+The calculator shows this attribution under **Data attribution** at the bottom of the page.
