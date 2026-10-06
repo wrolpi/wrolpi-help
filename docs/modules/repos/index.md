@@ -113,8 +113,9 @@ Settings page. The default is `repos/%(repo_tag)s/%(repo_name)s`.
 | `%(repo_owner)s`  | The owner from the URL (e.g. `kiwix`).    |
 | `%(repo_host)s`   | The host from the URL (e.g. `github.com`). |
 
-The `repos` directory is always ignored when WROLPi refreshes your files, so the many files of a repo do not crowd your
-file search. If you change the Repos Directory to somewhere outside `repos`, those repos' files will be indexed.
+The Repos Directory must start with a fixed directory (like `repos/`) and contain `%(repo_name)s`. That fixed
+directory is always ignored when WROLPi refreshes your files, so the many files of a repo do not crowd your file
+search. It cannot be (or be inside) another special directory, like `videos` or `config`.
 
 ## Config
 
