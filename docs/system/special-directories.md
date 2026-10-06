@@ -5,6 +5,7 @@
 | `/media/wrolpi/`        | The [Media Directory](#media-directory).                                             |
 | `/media/wrolpi/config/` | The [configuration files](#wrolpi-config) of the WROLPi.                             |
 | `/media/wrolpi/tags/`   | The [Tags Directory](#tags-directory) contains links to files that have been tagged. |
+| `/media/wrolpi/repos/`  | The [Repos Directory](#repos-directory) contains your git repos.                     |
 | `/opt/wrolpi-blobs/`    | Contains files necessary to repair a WROLPi.                                         |
 | `/opt/wrolpi-help/`     | These help files.                                                                    |
 | `/opt/wrolpi/`          | The [source code](#wrolpi-source-directory) of WROLPi.                               |
@@ -34,6 +35,16 @@ This directory contains links to tagged files. It is automatically managed by WR
 files.  See [Tags](tags.md).
 
 **Warning!**  Do not store files in this directory, they will be automatically deleted.
+
+## Repos Directory
+
+`/media/wrolpi/repos`
+
+This directory contains the git repos of the [Repos](../modules/repos/index.md) module. Its files are never indexed, so
+they do not appear in file search.
+
+**Warning!**  WROLPi keeps each repo identical to its source; changes you make to a repo's files are discarded by the
+next update.
 
 ## WROLPi Blobs
 

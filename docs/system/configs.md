@@ -19,6 +19,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `channels.yaml` | Your video Channels and their download schedules. |
 | `domains.yaml` | Your Archive Domains. |
 | `playlists.yaml` | Your Playlists, including the order of their items. |
+| `repos.yaml` | Your [Repos](../modules/repos/index.md) and their download schedules. |
 | `download_manager.yaml` | All of your Downloads, and the skip list of deleted URLs. |
 | `videos_downloader.yaml` | Video downloader (yt-dlp) settings: resolutions, file name format, etc. |
 | `archives_downloader.yaml` | Archive downloader settings. |
@@ -70,8 +71,9 @@ Channels at once). Keep in mind:
 Imports are designed to be safe, but you should know the rules:
 
 * A **missing or empty** config file never deletes anything from the database.
-* Removing a Channel or Playlist from a non-empty `channels.yaml` / `playlists.yaml` **will delete it** (and a
-  Channel's videos) on the next import — this is how you can remove Collections by editing configs.
+* Removing a Channel, Playlist or Repo from a non-empty `channels.yaml` / `playlists.yaml` / `repos.yaml` **will
+  delete it** (and a Channel's videos; a Repo's files are kept) on the next import — this is how you can remove
+  Collections by editing configs.
 * Removing a Tag from `tags.yaml` only deletes it if it is no longer used by anything.
 
 ## Backup and Restore
