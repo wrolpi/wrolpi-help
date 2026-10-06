@@ -63,7 +63,9 @@ If the source disappears (deleted, made private, or no Internet), **your copy is
 Some repos include other repos, called submodules. Check **Include submodules** to download them too. Submodules are
 updated with their repo and use the same Mode.
 
-Only `https://` submodules can be downloaded. If a submodule cannot be downloaded (for example, it uses an SSH URL like
+Only `https://` submodules can be downloaded. For your network's safety, a submodule must be on the repo's own server or
+on a public address; WROLPi will not download a submodule from a private address (like `192.168.1.10` or
+`localhost`). If a submodule cannot be downloaded (for example, it uses an SSH URL like
 `git@github.com:owner/repo.git`), the repo itself is still updated, and its download shows the submodule's error.
 Unchecking **Include submodules** removes the submodules' files.
 
