@@ -19,6 +19,7 @@ to date while you have Internet access. You can browse a repo's files and read i
 | Download Frequency | How often WROLPi checks for updates. Weekly by default.                                       |
 | Mode               | **Full history** (default) or **Snapshot**. See [Modes](#modes).                              |
 | Branch             | Optional. Empty follows the repo's default branch (usually `main` or `master`).               |
+| Include submodules | Optional. Also download the other repos this repo includes. See [Submodules](#submodules).   |
 
 WROLPi clones the repo in the background; its progress is on the Downloads page. Any git host that supports
 `https://` works (GitHub, GitLab, Codeberg, Gitea, sourcehut, and others). SSH URLs, and repos that require a password,
@@ -57,6 +58,15 @@ If the source disappears (deleted, made private, or no Internet), **your copy is
 
 **Warning!** Git LFS files are not downloaded; they appear as small text files.
 
+## Submodules
+
+Some repos include other repos, called submodules. Check **Include submodules** to download them too. Submodules are
+updated with their repo and use the same Mode.
+
+Only `https://` submodules can be downloaded. If a submodule cannot be downloaded (for example, it uses an SSH URL like
+`git@github.com:owner/repo.git`), the repo itself is still updated, and its download shows the submodule's error.
+Unchecking **Include submodules** removes the submodules' files.
+
 ## Browsing a Repo
 
 > To view a repo, click its name in the Repos table.
@@ -65,6 +75,12 @@ The repo's page shows its source, branch, size, and latest commit, then its file
 open it, or a file to preview it. The README of each directory is shown below its files.
 
 ![Repo Page](repo-page.png)
+
+Click **History** to see the repo's commits, newest first. A Snapshot only keeps the latest commit.
+
+> To copy a repo's files to another computer, click **Download ZIP** on the repo's page.
+
+The ZIP contains the files of the latest commit (no history), so it works on computers without git.
 
 ## Search
 
