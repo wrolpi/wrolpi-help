@@ -16,7 +16,7 @@ to date while you have Internet access. You can browse a repo's files and read i
 | URL                | The `https://` address of the repo, e.g. `https://github.com/kiwix/kiwix-tools`.              |
 | Name               | Optional. Defaults to the last part of the URL (`kiwix-tools`).                               |
 | Tag                | Optional. A tagged repo is saved under its Tag in the Repos Directory.                        |
-| Download Frequency | How often WROLPi checks for updates. Weekly by default.                                       |
+| Download Frequency | How often WROLPi checks for updates. Weekly by default. See [Never](#never).                   |
 | Mode               | **Full history** (default) or **Snapshot**. See [Modes](#modes).                              |
 | Branch             | Optional. Empty follows the repo's default branch (usually `main` or `master`).               |
 | Include submodules | Optional. Also download the other repos this repo includes. See [Submodules](#submodules).   |
@@ -77,6 +77,15 @@ A repo is a **mirror** of its source:
 
 If the source disappears (deleted, made private, or no Internet), **your copy is kept**. The repo's page shows
 "The last update failed" with git's error, and the update is tried again later.
+
+### Never
+
+A repo whose Download Frequency is **Never** is kept exactly as it is. Choose it on the repo's Edit page when its
+source is gone for good, so its updates stop failing. **Update Now** still updates it once, e.g. if the source comes
+back.
+
+A new repo with a Download Frequency of Never is cloned once, then never updated. An imported clone set to Never is
+never downloaded.
 
 **Warning!** Git LFS files are not downloaded; they appear as small text files.
 
@@ -145,4 +154,5 @@ indexed, unless you ignore that directory in Files.
 ## Config
 
 Your repos are saved in `repos.yaml` in the [config directory](../../system/configs.md). If your database is lost, your
-repos (and their download schedules) are restored from this file.
+repos (and their download schedules) are restored from this file. A repo which is never updated is saved with
+`frequency: never`; if its clone is missing when it is restored, it is cloned once.
