@@ -72,8 +72,8 @@ Imports are designed to be safe, but you should know the rules:
 
 * A **missing or empty** config file never deletes anything from the database.
 * Removing a Channel, Playlist or Repo from a non-empty `channels.yaml` / `playlists.yaml` / `repos.yaml` **will
-  delete it** (and a Channel's videos; a Repo's files are kept) on the next import — this is how you can remove
-  Collections by editing configs.
+  delete it** on the next import — this is how you can remove Collections by editing configs. A Channel's Downloads
+  are deleted with it, but its videos are kept (they no longer belong to a Channel); a Repo's files are kept.
 * Removing a Domain from `domains.yaml` only deletes it if it has no Archives. A Domain with Archives is kept (and written
   back to `domains.yaml` the next time Domains are saved), because deleting it would also delete its Archives.
 * Removing a Tag from `tags.yaml` only deletes it if it is no longer used by anything.
