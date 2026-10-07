@@ -20,6 +20,7 @@ to date while you have Internet access. You can browse a repo's files and read i
 | Mode               | **Full history** (default) or **Snapshot**. See [Modes](#modes).                              |
 | Branch             | Optional. Empty follows the repo's default branch (usually `main` or `master`).               |
 | Include submodules | Optional. Also download the other repos this repo includes. See [Submodules](#submodules).   |
+| Directory          | Optional. Where to save the repo; it must be empty. Empty saves it in the [Repos Directory](#repos-directory). |
 
 WROLPi clones the repo in the background; its progress is on the Downloads page. Any git host that supports
 `https://` works (GitHub, GitLab, Codeberg, Gitea, sourcehut, and others). SSH URLs, and repos that require a password,
@@ -37,9 +38,10 @@ If you already have a git clone in your media directory, WROLPi can take it over
 
 > To import a clone, click **Repos** in the navigation bar, click **Import**, then choose the clone's directory.
 
-WROLPi shows the clone's origin, branch and latest commit, and where it will be moved. Then:
+WROLPi shows the clone's origin, branch and latest commit. Then:
 
-* The clone is **moved** into the Repos Directory (so its files are no longer indexed).
+* The clone **stays where it is**. Unless its directory is ignored, its files stay indexed (searchable); to keep them
+  out of search, ignore the directory in Files.
 * Its URL must be the clone's origin. An SSH origin like `git@github.com:owner/repo.git` is converted to its
   `https://` URL; if the clone has no origin, enter its URL.
 * Like a new repo, it follows the remote's default branch unless you enter a Branch.
@@ -136,6 +138,9 @@ Settings page. The default is `repos/%(repo_tag)s/%(repo_name)s`.
 The Repos Directory must start with a fixed directory (like `repos/`) and contain `%(repo_name)s`. That fixed
 directory is always ignored when WROLPi refreshes your files, so the many files of a repo do not crowd your file
 search. It cannot be (or be inside) another special directory, like `videos` or `config`.
+
+A repo saved in another directory (chosen when adding it, or imported where it was) is not ignored: its files are
+indexed, unless you ignore that directory in Files.
 
 ## Config
 
