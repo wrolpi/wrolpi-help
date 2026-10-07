@@ -31,6 +31,26 @@ that branch.
 If two repos have the same name (e.g. two repos named `utils` from different owners), WROLPi asks you to choose another
 name, such as `owner-utils`.
 
+## Importing an Existing Clone
+
+If you already have a git clone in your media directory, WROLPi can take it over instead of downloading it again.
+
+> To import a clone, click **Repos** in the navigation bar, click **Import**, then choose the clone's directory.
+
+WROLPi shows the clone's origin, branch and latest commit, and where it will be moved. Then:
+
+* The clone is **moved** into the Repos Directory (so its files are no longer indexed).
+* Its URL must be the clone's origin. An SSH origin like `git@github.com:owner/repo.git` is converted to its
+  `https://` URL; if the clone has no origin, enter its URL.
+* Like a new repo, it follows the remote's default branch unless you enter a Branch.
+
+**Warning!** An imported clone becomes a mirror. Its first update discards local changes, untracked files, and any
+commits that are not on the remote. WROLPi warns you if it has commits which are not on the remote; push them
+first if you want to keep them.
+
+WROLPi only updates clones it downloaded or imported. If a repo's directory already holds a different git clone, the
+repo's download fails and explains that it must be imported.
+
 ## Modes
 
 | Mode         | What is saved                                         | Size                                |
