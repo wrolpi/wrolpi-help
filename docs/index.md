@@ -13,6 +13,7 @@ Information about a WROLPi system.
 * [How WROLPi Stores Files](system/filegroups.md)
 * [How Configs Work](system/configs.md)
 * [Tags](system/tags.md)
+* [Resume Where You Left Off](system/viewing-progress.md)
 * [Collections](system/collections/index.md)
     * [Reorganize Collections](system/collections/reorganization.md)
 * [Backup](system/backup.md)

@@ -11,6 +11,9 @@ Epub files are desired as ebooks, though some support for Mobi files is provided
 * Device support for Epubs is nearly ubiquitous.
 * Because an Epub contains HTML files, it makes it easy to display them in a web browser.
 
+EPUB eBooks and comic books open on the page you were reading; see
+[Resume Where You Left Off](../system/viewing-progress.md).
+
 Cover images are detected automatically — including Calibre-style directories with a `cover.jpg` — see
 [Cover Images](../modules/docs/index.md#cover-images).
 

@@ -26,6 +26,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `download_cache.yaml` | Cached video durations (safe to ignore). |
 | `map_pins.yaml` | Your [Map](../modules/map/index.md) pins. |
 | `bookmarks.yaml` | Your [Bookmarks](../modules/bookmarks/index.md), including their directories and order. |
+| `recently_viewed.yaml` | Your 1,000 most recently viewed files, and [where you left off](viewing-progress.md) in each. |
 | `inventory/*.yaml` | One file per [Inventory](../modules/inventory/index.md), plus the food catalog. |
 | `cookies.txt.enc` | Your [encrypted cookies](../modules/videos/cookies.md). |
 | `controller.yaml` | [Controller](../controller/index.md) settings: drives, Samba shares, hotspot. |
@@ -91,7 +92,7 @@ Imports are designed to be safe, but you should know the rules:
 
 A few things live only in the database and are lost if the database is rebuilt:
 
-* Video watch history / view positions.
+* Viewing history beyond your 1,000 most recently viewed files (see [Resume Where You Left Off](viewing-progress.md)).
 * The file index itself (this is simply rebuilt by a file refresh).
 
 Everything you deliberately curated — Tags, Channels, Playlists, Downloads, Inventories, pins, settings — is in the
