@@ -80,6 +80,26 @@ Default hotspot settings:
 Click **Disable Hotspot** to turn off the WiFi access point. Connected devices will be
 disconnected.
 
+### Starting on Boot
+
+The hotspot starts every time the WROLPi boots, so you can always join it, even with no
+other network.  This replaces any WiFi network the device had joined.
+
+To never start the hotspot on boot (for example, so the WROLPi does not broadcast a WiFi
+network), set `on_startup` to `false` in the `hotspot` section of
+`/media/wrolpi/config/controller.yaml`:
+
+```yaml
+hotspot:
+  on_startup: false
+```
+
+An older `hotspot_on_startup: false` in `wrolpi.yaml` is copied into `controller.yaml` when
+the Controller starts.
+
+If your primary drive is set up but fails to mount, the WROLPi cannot read this setting,
+so it does not start the hotspot.
+
 ### When to Use Hotspot
 
 The hotspot is useful for:
