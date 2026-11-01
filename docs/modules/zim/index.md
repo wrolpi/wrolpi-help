@@ -30,6 +30,13 @@ the `zims` directory.  (You may need to restart your WROLPi for the new Zim file
 
 ![Downloading a Zim file using the Files Downloader](zim-file-downloader.png)
 
+### Choosing which Zims are searched
+
+Every Zim is searched by default.  Searching a large Zim (such as all of Wikipedia or StackOverflow) can take a long
+time, so the Manage tab has a **Search** toggle for each Zim; turn it off and the global search leaves that Zim out.
+The choice is saved in `zims.yaml` (see [How Configs Work](../../system/configs.md)) by the Zim's name without its
+date, so a newer version of a Zim keeps the setting, and a rebuilt database gets it back.
+
 ## Kiwix without WROLPi
 
 WROLPi comes with Kiwix pre-installed, this application allows you to use your zim files even if the React App is not

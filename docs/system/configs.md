@@ -20,6 +20,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `domains.yaml` | Your Archive Domains. |
 | `playlists.yaml` | Your Playlists, including the order of their items. |
 | `repos.yaml` | Your [Repos](../modules/repos/index.md) and their download schedules. |
+| `zims.yaml` | Which [Zims](../modules/zim/index.md) the global search searches (the Search toggle on the Zims page), keyed by Zim name so a newer version of a Zim keeps the setting. |
 | `download_manager.yaml` | All of your Downloads, and the skip list of deleted URLs. |
 | `videos_downloader.yaml` | Video downloader (yt-dlp) settings: resolutions, file name format, etc. |
 | `archives_downloader.yaml` | Archive downloader settings. |
