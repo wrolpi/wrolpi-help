@@ -260,6 +260,9 @@ overlay is named by the name stored inside the file, or by its file name when it
 
 - A **vector** overlay has an arrow beside it. Click the arrow to list the layers inside the file, each
   with its own checkbox, and **All** / **None** to check or clear them together.
+- A layer of something the basemap already draws (roads, water, buildings, place names, and so on)
+  starts unchecked, so the map is not drawn twice. Check the layer if you want the overlay's version
+  of it.
 - A **raster** overlay (imagery) is a single layer. It is drawn beneath the basemap's labels so place
   names stay readable.
 - The zoom levels the file has tiles for are shown beside its name (e.g. `z0–13`).
