@@ -26,6 +26,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `archives_downloader.yaml` | Archive downloader settings. |
 | `download_cache.yaml` | Cached video durations (safe to ignore). |
 | `map_pins.yaml` | Your [Map](../modules/map/index.md) pins. |
+| `maps.yaml` | The [Map](../modules/map/index.md) files the map ignores (the Visible toggle on the Map's Manage tab). |
 | `bookmarks.yaml` | Your [Bookmarks](../modules/bookmarks/index.md), including their directories and order. |
 | `recently_viewed.yaml` | Your 1,000 most recently viewed files, and [where you left off](viewing-progress.md) in each. |
 | `inventory/*.yaml` | One file per [Inventory](../modules/inventory/index.md), plus the food catalog. |
