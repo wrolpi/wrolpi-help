@@ -17,6 +17,7 @@ Information about a WROLPi system.
 * [Collections](system/collections/index.md)
     * [Reorganize Collections](system/collections/reorganization.md)
 * [Backup](system/backup.md)
+* [Sync: a Second WROLPi](system/sync.md)
 * [Logs](system/logs.md)
 * [Systems](system/index.md)
 * [Services (systemd)](system/systemd.md)
