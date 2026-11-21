@@ -26,7 +26,7 @@ All configs are stored in the `config` directory of your media directory: `/medi
 | `archives_downloader.yaml` | Archive downloader settings. |
 | `download_cache.yaml` | Cached video durations (safe to ignore). |
 | `map_pins.yaml` | Your [Map](../modules/map/index.md) pins. |
-| `maps.yaml` | The [Map](../modules/map/index.md) files the map ignores (the Visible toggle on the Map's Manage tab). |
+| `maps.yaml` | The [Map](../modules/map/files.md#visible) files the map ignores (the Visible toggle on the Map's Manage tab). |
 | `sync.yaml` | This WROLPi's [Sync](sync.md) role, its primary, its sync window, and its [Backup](backup.md) drive. Never copied to a secondary. |
 | `sync_state.yaml` | When the last [Sync](sync.md) ran and what it did. Written by the Controller. |
 | `bookmarks.yaml` | Your [Bookmarks](../modules/bookmarks/index.md), including their directories and order. |
