@@ -26,7 +26,7 @@ The Download menu offers a form for each kind of download:
 
     **Warning!** Scraping can be exponential — each level of depth can multiply the number of pages visited.
 
-[Zim subscriptions](../zim/index.md) and [Map subscriptions](../map/index.md) also create recurring downloads; they
+[Zim subscriptions](../zim/index.md) and [Map subscriptions](../map/files.md#map-subscriptions) also create recurring downloads; they
 are managed from their own pages but appear in the Downloads page like everything else.
 
 ## Once vs Recurring
